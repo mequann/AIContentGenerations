@@ -30,7 +30,7 @@ Suggested experiments this pipeline is set up for (delete once run):
 - **Hypothesis:** the storyteller will connect more with a photoreal film; illustration reads as "a children's book, not my memory".
 - **Change:** `style.block` gouache storybook → photorealistic 35 mm cinematic; negative excludes cartoon/illustration.
 - **Evidence:** author feedback on radio cut / first draft: "not seems real film" (DESIGN.md §2b).
-- **Result:** _fill in after keyframes v2 (v1 sheet: `outputs/review/keyframes_v1_illustration.jpg`)._
+- **Result:** v2 (`outputs/review/keyframes_v2_photoreal.jpg`) reads as real rural Ethiopia: dark-skinned Habesha boys, wet tsedey ground, adey abeba. Author's call on whether it "feels like a real film" pending the draft.
 
 ## E02: List-style character text makes FLUX draw panels (2026-11-25)
 - **Observation (keyframes v1, FLUX.1 schnell):** 5 of 13 keyframes (s04, s05, s07, s11, s13) came out as two-panel
@@ -39,4 +39,17 @@ Suggested experiments this pipeline is set up for (delete once run):
   "Ethiopian" alone is too weak to set skin tone and place.
 - **Change:** prompt now opens with "One single continuous cinematic frame… no panels"; characters written as plain
   sentences; descriptions say "Habesha, dark brown skin"; style block adds eucalyptus and tukul huts.
-- **Result:** _fill in: count of panel layouts in v2 (target 0/13); do the boys read as Ethiopian?_
+- **Result:** v2 has **0/13** panel layouts (v1: 5/13). Boys read as Ethiopian in 13/13. Model was FLUX.2 klein 4B
+  with reference images, so the prompt change and the model change are confounded; a fair test would rerun v1
+  prompts on klein (not done, to save daily image quota).
+
+## E03: Reference images leak their background into every shot (2026-11-25)
+- **Observation (keyframes v2, FLUX.2 klein + references):** identity is consistent (same boy, red-cap friend, chestnut
+  horse with blaze in every shot), but 12/13 shots share the *same* tukul-village background as the reference
+  sheets, even s08 (teff field) and s10 (jump into mud). The tall friend also reads as an adult in s04/s05.
+- **Hypothesis:** FLUX.2 copies the whole reference image, not just the subject; a plain-background reference
+  transfers identity without the setting. "Shaved head, tall" drifts older without an explicit age anchor.
+- **Change:** reference prompt → plain light-grey studio background, no style block; style block drops tukul huts in
+  favour of open fields; friends' description says "13-year-old … clearly children not adults".
+- **Cost:** new references change their hashes, so all 13 keyframes regenerate (16 images of the daily allowance).
+- **Result:** _fill in after keyframes v3: how many shots still share one background? does the tall friend read as a child?_

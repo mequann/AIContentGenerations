@@ -15,7 +15,7 @@
     "fps": 24
   },
   "style": {
-    "block": "Photorealistic cinematic film still, shot on a 35mm lens with shallow depth of field, natural golden late-afternoon light, rural Amhara highlands of Ethiopia in the green tsedey season after the rains, wet earth, scattered yellow adey abeba flowers, eucalyptus trees and round thatched tukul huts in the distance, rich true-to-life colour, gentle film grain, documentary realism.",
+    "block": "Photorealistic cinematic film still, shot on a 35mm lens with shallow depth of field, natural golden late-afternoon light, rural Amhara highlands of Ethiopia in the green tsedey season after the rains, wet earth, scattered yellow adey abeba flowers, wide open rolling green fields with only a few eucalyptus trees far away, rich true-to-life colour, gentle film grain, documentary realism.",
     "negative": "cartoon, illustration, painting, anime, 3d render, text, letters, watermark, logo, extra fingers, extra limbs, deformed horse, extra legs, distorted face, modern buildings, cars, plastic backpack",
     "image_width": 1344,
     "image_height": 768
@@ -34,7 +34,7 @@
     {
       "id": "friends",
       "name": "his two friends",
-      "description": "his two friends are Ethiopian Habesha schoolboys aged 13 to 14 with dark brown skin, in the same faded light-blue school uniform shirts and dark-blue shorts; one is tall and thin with a shaved head, the other shorter and stocky wearing a red knitted cap",
+      "description": "his two friends are 13-year-old Ethiopian Habesha schoolboys, clearly children not adults, with dark brown skin, in the same faded light-blue school uniform shirts and dark-blue shorts; one is taller and thin with a closely shaved head, the other shorter and stocky wearing a red knitted cap",
       "real_person": true,
       "consent_ref": "C-02",
       "seed": 1501,

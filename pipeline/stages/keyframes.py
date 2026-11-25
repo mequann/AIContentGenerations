@@ -64,9 +64,12 @@ def _generate(ctx: Ctx, *, stage: str, item: str, prompt: str, seed: int, w: int
 # ----------------------------------------------------------------------------- references
 
 def reference_prompt(ctx: Ctx, char: dict) -> str:
-    return (f"Reference portrait, full body, standing, facing the camera, neutral expression, even soft light, plain "
-            f"warm-grey background, no text. {char['description'].strip()[:1].upper() + char['description'].strip()[1:]}. "
-            f"{ctx.sb['style']['block'].strip()}")
+    """Studio-style sheet: subject only, plain background. The setting is deliberately left out:
+    reference images are fed to FLUX.2, and a background in the reference gets copied into every
+    shot (keyframes v2 put the same tukul village behind 12 of 13 shots, EXPERIMENTS E03)."""
+    d = char["description"].strip()
+    return (f"Photorealistic reference photo, full body, standing, facing the camera, neutral expression, even soft "
+            f"studio light, plain light-grey seamless background, nothing else in frame, no text. {d[:1].upper() + d[1:]}.")
 
 
 def run_references(ctx: Ctx) -> dict[str, Path]:
