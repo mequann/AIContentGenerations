@@ -11,9 +11,23 @@ which show no one, may run. Nothing of a real person is generated before consent
 | Ref | Person | Relation | What they agreed to (likeness / voice / story / words) | How recorded (date, medium, where stored) | Reviewed final words? |
 |---|---|---|---|---|---|
 | C-01 | Mequannt (the narrator, shown as a 14-year-old boy) | self | Likeness as an illustrated child, the story, the narration words | Self-consent, 2026-11-25, this repository | Yes (author) |
-| C-02 | Friend 1: _name_ and Friend 2: _name_ (the two friends in the story) | childhood friends | Being depicted as illustrated, non-photoreal children; the story as told in `story/story.md` | PENDING: author reports both agreed (2026-11-25). Need a recorded confirmation from each (voice note or written message) saying they agree to this film and how they are shown; store it privately and note the date and medium here, then remove the word PENDING | After the near-final cut |
+| C-02 | Aemro Yimer and Mikias Enyew (the two friends in the story) | childhood friends | Being part of the story and depicted as illustrated, non-photoreal boys; the story as told in `story/story.md` | Written statement from each, 2026-11-25, relayed by the author in the project chat; verbatim text in §1.1 below. Originals kept privately by the author | After the near-final cut |
+
+### 1.1 Consent statements (verbatim, 2026-11-25)
+
+> እኔ አእምሮ ይመር የመኳንንት አቻም ጓደኛ ስሆን የታሪኩ አካል በመሆኔ ደስ እያለኝ ሙሉ ፍቃዴን ሰጥቻለሁ።
+
+*"I, Aemro Yimer, a friend of Mequannt Acham, am happy to be part of the story and have given my full consent."*
+
+> እኔ ሚኪያስ እንየው የመኳንንት አቻም ጓደኛ ስሆን የታሪኩ አካል በመሆኔ ደስ እያለኝ ሙሉ ፍቃዴን ሰጥቻለሁ።
+
+*"I, Mikias Enyew, a friend of Mequannt Acham, am happy to be part of the story and have given my full consent."*
+
+Both friends will be shown the near-final cut before it is posted, so they see exactly how they
+appear and the words used, and can ask for changes.
 
 Notes:
+- The friends' names are kept out of every prompt sent to model APIs and appear only here.
 - The horse's owner is a real, unnamed person. He is shown only as a tiny, faceless distant
   figure (shot s09), is never named, and no likeness is generated.
 - The friends are drawn as generic illustrated boys (not from photos), so no real face is copied.
