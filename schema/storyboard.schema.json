@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/heritage-short/schema/storyboard.schema.json",
+  "title": "Heritage Short storyboard",
+  "description": "The single contract between every pipeline stage. Each stage reads only the fields it needs and caches on a hash of exactly those fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "meta", "style", "characters", "voice", "music", "shots", "end_card"],
+  "properties": {
+    "version": { "type": "string", "pattern": "^1\\.[0-9]+$" },
+
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "logline", "language", "audience", "intent", "target_duration_s"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "title_native": { "type": "string", "description": "Title in the narration language, shown on the end card." },
+        "logline": { "type": "string", "minLength": 10, "maxLength": 300 },
+        "language": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["code", "name"],
+          "properties": {
+            "code": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$", "description": "BCP-47, e.g. am, om, ti, en" },
+            "name": { "type": "string" }
+          }
+        },
+        "subtitle_language": { "type": "string", "default": "en" },
+        "audience": { "type": "string", "minLength": 10 },
+        "intent": { "type": "string", "minLength": 10, "description": "What the viewer should feel/understand at the end." },
+        "target_duration_s": { "type": "number", "minimum": 60, "maximum": 90 },
+        "fps": { "type": "integer", "enum": [24, 25, 30], "default": 24 }
+      }
+    },
+
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["block"],
+      "properties": {
+        "block": { "type": "string", "minLength": 20, "description": "Appended verbatim to every image prompt. Describe qualities, never a living artist." },
+        "negative": { "type": "string", "default": "" },
+        "image_width": { "type": "integer", "minimum": 512, "maximum": 2048, "default": 1344 },
+        "image_height": { "type": "integer", "minimum": 512, "maximum": 2048, "default": 768 }
+      }
+    },
+
+    "characters": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "description", "real_person"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+          "name": { "type": "string" },
+          "description": { "type": "string", "minLength": 20, "description": "Fixed visual description injected into every shot that features this character." },
+          "real_person": { "type": "boolean", "description": "true → a consent record id is required (see ETHICS.md)." },
+          "consent_ref": { "type": "string", "description": "Id of the consent entry in ETHICS.md, e.g. C-01." },
+          "seed": { "type": "integer", "minimum": 0, "default": 1000 },
+          "candidates": { "type": "integer", "minimum": 1, "maximum": 6, "default": 1 },
+          "selected": { "type": "integer", "minimum": 0, "default": 0 }
+        },
+        "if": { "properties": { "real_person": { "const": true } } },
+        "then": { "required": ["consent_ref"] }
+      }
+    },
+
+    "voice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tts_voice", "style_instruction"],
+      "properties": {
+        "tts_voice": { "type": "string", "description": "Gemini prebuilt voice name, e.g. Kore, Charon, Sulafat." },
+        "style_instruction": { "type": "string", "description": "Plain-language delivery direction, e.g. 'Read slowly and warmly, like an elder telling a story.'" },
+        "voice_is_real_person": { "type": "boolean", "default": false },
+        "consent_ref": { "type": "string" }
+      }
+    },
+
+    "music": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["caption"],
+      "properties": {
+        "caption": { "type": "string", "minLength": 10, "description": "ACE-Step caption: style, mood, instruments, texture, era. No tempo/key here." },
+        "lyrics": { "type": "string", "default": "[instrumental]" },
+        "bpm": { "type": "integer", "minimum": 40, "maximum": 200 },
+        "key": { "type": "string" },
+        "seed": { "type": "integer", "minimum": 0, "default": 42 },
+        "candidates": { "type": "integer", "minimum": 1, "maximum": 8, "default": 3 },
+        "selected": { "type": "integer", "minimum": 0, "default": 0 },
+        "selection_reason": { "type": "string" },
+        "volume_db": { "type": "number", "minimum": -40, "maximum": 0, "default": -6 },
+        "cues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["at_s", "note"],
+            "properties": { "at_s": { "type": "number", "minimum": 0 }, "note": { "type": "string" } }
+          }
+        }
+      }
+    },
+
+    "shots": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 14,
+      "items": { "$ref": "#/$defs/shot" }
+    },
+
+    "end_card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "duration_s"],
+      "properties": {
+        "text": { "type": "string", "description": "Must disclose AI generation." , "pattern": "(?i)\\bAI\\b|artificial intelligence" },
+        "subtext": { "type": "string" },
+        "duration_s": { "type": "number", "minimum": 2, "maximum": 8 }
+      }
+    }
+  },
+
+  "$defs": {
+    "shot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "reason", "duration_s", "shot_size", "keyframe", "motion", "narration"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^s[0-9]{2}$" },
+        "reason": { "type": "string", "minLength": 10, "description": "Why this shot exists — one sentence." },
+        "beat": { "type": "string" },
+        "duration_s": { "type": "number", "minimum": 2, "maximum": 15 },
+        "shot_size": { "enum": ["extreme_wide", "wide", "medium", "medium_close_up", "close_up", "extreme_close_up", "insert"] },
+        "characters": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "keyframe": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["prompt"],
+          "properties": {
+            "prompt": { "type": "string", "minLength": 15 },
+            "seed": { "type": "integer", "minimum": 0, "default": 7 },
+            "candidates": { "type": "integer", "minimum": 1, "maximum": 6, "default": 1 },
+            "selected": { "type": "integer", "minimum": 0, "default": 0 }
+          }
+        },
+        "motion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["engine"],
+          "properties": {
+            "engine": { "enum": ["wan", "kenburns", "still"], "description": "wan = Wan 2.2 clip from Kaggle (falls back to kenburns if missing)." },
+            "prompt": { "type": "string", "description": "Motion + camera only; the keyframe already fixes subject and place." },
+            "seed": { "type": "integer", "minimum": 0, "default": 11 },
+            "kenburns": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "zoom_from": { "type": "number", "minimum": 1.0, "maximum": 2.0, "default": 1.0 },
+                "zoom_to": { "type": "number", "minimum": 1.0, "maximum": 2.0, "default": 1.12 },
+                "pan": { "enum": ["none", "left", "right", "up", "down"], "default": "none" }
+              }
+            },
+            "trim_start_s": { "type": "number", "minimum": 0, "default": 0.0 }
+          }
+        },
+        "narration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text", "english"],
+          "properties": {
+            "text": { "type": "string", "description": "Line in the narration language. Empty string = no voice on this shot." },
+            "english": { "type": "string", "description": "English subtitle for the line." },
+            "offset_s": { "type": "number", "minimum": 0, "default": 0.4 },
+            "style_override": { "type": "string" }
+          }
+        },
+        "transition": { "enum": ["cut", "fade"], "default": "cut" },
+        "vertical": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mode": { "enum": ["crop", "blurpad"], "default": "crop" },
+            "focus_x": { "type": "number", "minimum": 0, "maximum": 1, "default": 0.5, "description": "Horizontal centre of the 9:16 crop, 0=left 1=right." }
+          }
+        }
+      }
+    }
+  }
+}

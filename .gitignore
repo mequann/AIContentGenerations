@@ -1,0 +1,19 @@
+# Secrets
+.env
+*.key
+kaggle.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Scratch / intermediate (final outputs ARE committed so the run can be inspected)
+outputs/_tmp/
+outputs/**/*.part
+kaggle/out/
+.DS_Store
+Thumbs.db

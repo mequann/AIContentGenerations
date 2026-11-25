@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "meta": {
+    "title": "The Third Cup",
+    "title_native": "ሦስተኛው ሲኒ",
+    "logline": "DEMO STORYBOARD (fictional): a grandmother's coffee ceremony teaches her grandson that the third cup, the blessing, is the one you stay for.",
+    "language": { "code": "am", "name": "Amharic" },
+    "subtitle_language": "en",
+    "audience": "Fictional demo audience: young Ethiopians in the diaspora who grew up hearing about the coffee ceremony but rarely sat through one.",
+    "intent": "Viewers should feel the patience of the ceremony and want to call someone older than them.",
+    "target_duration_s": 75,
+    "fps": 24
+  },
+  "style": {
+    "block": "Warm hand-painted gouache illustration, soft paper grain, muted ochre, terracotta and deep green palette, gentle window light, quiet and intimate mood.",
+    "negative": "text, letters, watermark, logo, extra fingers, deformed hands, blurry face",
+    "image_width": 1344,
+    "image_height": 768
+  },
+  "characters": [
+    {
+      "id": "etetu",
+      "name": "Etetu",
+      "description": "a fictional Ethiopian grandmother in her seventies, kind deep-set eyes, short grey hair under a white netela shawl with a thin green border, small cross tattoo on her forehead, simple white habesha dress",
+      "real_person": false,
+      "seed": 1001,
+      "candidates": 1,
+      "selected": 0
+    }
+  ],
+  "voice": {
+    "tts_voice": "Sulafat",
+    "style_instruction": "Read in Amharic slowly and warmly, like an elder telling a story to a grandchild at night. Leave small pauses between sentences.",
+    "voice_is_real_person": false
+  },
+  "music": {
+    "caption": "gentle Ethiopian krar and soft strings, tizita mood, warm, nostalgic, sparse, intimate acoustic, slow build, no drums",
+    "lyrics": "[instrumental]",
+    "bpm": 68,
+    "key": "A minor",
+    "seed": 42,
+    "candidates": 3,
+    "selected": 0,
+    "volume_db": -6,
+    "cues": [
+      { "at_s": 0, "note": "krar alone, very sparse" },
+      { "at_s": 40, "note": "strings enter under the third cup" },
+      { "at_s": 68, "note": "resolve and fade over the end card" }
+    ]
+  },
+  "shots": [
+    { "id": "s01", "reason": "Establish the place and time: a quiet compound at dawn.", "beat": "opening", "duration_s": 7, "shot_size": "extreme_wide",
+      "keyframe": { "prompt": "A small mud-brick house with a corrugated roof in a green highland village at dawn, mist over eucalyptus trees, smoke rising from the roof", "seed": 7 },
+      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.0, "zoom_to": 1.1, "pan": "right" } },
+      "narration": { "text": "በየማለዳው፣ አያቴ ቡና ታፈላ ነበር።", "english": "Every morning, my grandmother made coffee." },
+      "transition": "fade", "vertical": { "mode": "crop", "focus_x": 0.45 } },
+    { "id": "s02", "reason": "Introduce Etetu with her hands, the ritual's first gesture.", "duration_s": 8, "shot_size": "medium", "characters": ["etetu"],
+      "keyframe": { "prompt": "Etetu sits on a low stool spreading fresh green grass on the floor beside a small charcoal stove, window light from the left", "seed": 7 },
+      "motion": { "engine": "wan", "prompt": "she slowly scatters grass with one hand, steam drifts, camera static", "seed": 11 },
+      "narration": { "text": "መጀመሪያ ሳሩን ትጎዘጉዛለች።", "english": "First, she spreads the fresh grass." },
+      "vertical": { "mode": "crop", "focus_x": 0.5 } },
+    { "id": "s03", "reason": "The sound and smoke of roasting beans pull the viewer in.", "duration_s": 8, "shot_size": "close_up",
+      "keyframe": { "prompt": "Close-up of green coffee beans roasting dark brown in a flat iron pan over glowing charcoal, thin curls of smoke", "seed": 7 },
+      "motion": { "engine": "wan", "prompt": "beans shift as the pan is shaken, smoke curls upward, camera static", "seed": 11 },
+      "narration": { "text": "ቡናው ሲቆላ፣ ቤቱ በሙሉ ይሸታል።", "english": "As the beans roast, the whole house fills with the smell." },
+      "vertical": { "mode": "crop", "focus_x": 0.5 } },
+    { "id": "s04", "reason": "The grandson's point of view: he is impatient, which sets up the lesson.", "duration_s": 9, "shot_size": "medium_close_up",
+      "keyframe": { "prompt": "A teenage boy in a hoodie sits across the room looking at a phone, soft focus jebena coffee pot in the foreground", "seed": 7 },
+      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.05, "zoom_to": 1.15, "pan": "none" } },
+      "narration": { "text": "እኔ ግን ሁልጊዜ ቸኩዬ ነበር። አንድ ሲኒ ጠጥቼ መሄድ እፈልግ ነበር።", "english": "But I was always in a hurry. I wanted one cup and then to leave." },
+      "vertical": { "mode": "crop", "focus_x": 0.6 } },
+    { "id": "s05", "reason": "The first cup, abol, served with care.", "duration_s": 8, "shot_size": "insert", "characters": ["etetu"],
+      "keyframe": { "prompt": "Etetu's hands pour dark coffee from a black clay jebena in a high thin stream into small white cups on a wooden tray", "seed": 7 },
+      "motion": { "engine": "wan", "prompt": "a steady thin stream of coffee pours into the cup, slight steam, camera pushes in gently", "seed": 11 },
+      "narration": { "text": "የመጀመሪያው ሲኒ አቦል ይባላል።", "english": "The first cup is called abol." },
+      "vertical": { "mode": "crop", "focus_x": 0.5 } },
+    { "id": "s06", "reason": "Time passes: second cup, the light has moved.", "duration_s": 8, "shot_size": "wide", "characters": ["etetu"],
+      "keyframe": { "prompt": "The room in afternoon light, Etetu and two neighbours sit on low stools talking around the coffee tray, frankincense smoke in the air", "seed": 7 },
+      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.12, "zoom_to": 1.0, "pan": "left" } },
+      "narration": { "text": "ሁለተኛው ቶና። ጎረቤቶች ይመጣሉ፣ ወሬ ይጀመራል።", "english": "The second is tona. Neighbours arrive, the talking begins." },
+      "transition": "fade", "vertical": { "mode": "crop", "focus_x": 0.4 } },
+    { "id": "s07", "reason": "The turn: the third cup is the blessing, and he stays.", "duration_s": 9, "shot_size": "close_up", "characters": ["etetu"],
+      "keyframe": { "prompt": "Close-up of Etetu smiling gently and offering a small white cup toward the camera with both hands, warm evening light", "seed": 7 },
+      "motion": { "engine": "wan", "prompt": "she slowly extends the cup forward and smiles, camera static", "seed": 11 },
+      "narration": { "text": "ሦስተኛው በረካ ነው። ምርቃቱ። ያን ቀን፣ ቆየሁ።", "english": "The third is bereka, the blessing. That day, I stayed." },
+      "vertical": { "mode": "crop", "focus_x": 0.5 } },
+    { "id": "s08", "reason": "Let the music breathe on a quiet image before the ending.", "duration_s": 6, "shot_size": "extreme_close_up",
+      "keyframe": { "prompt": "Extreme close-up of an empty white coffee cup on a wooden tray, last light, a few roasted beans beside it", "seed": 7 },
+      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.0, "zoom_to": 1.08, "pan": "none" } },
+      "narration": { "text": "", "english": "" },
+      "vertical": { "mode": "crop", "focus_x": 0.5 } },
+    { "id": "s09", "reason": "Close the loop to the present and give the viewer something to do.", "duration_s": 8, "shot_size": "wide",
+      "keyframe": { "prompt": "The same mud-brick house at dusk, warm light in the window, smoke rising, first stars", "seed": 7 },
+      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.1, "zoom_to": 1.0, "pan": "none" } },
+      "narration": { "text": "ዛሬም፣ ቡና ሳፈላ፣ ሦስተኛውን ሲኒ እጠብቃለሁ።", "english": "Even today, when I make coffee, I wait for the third cup." },
+      "transition": "fade", "vertical": { "mode": "crop", "focus_x": 0.45 } }
+  ],
+  "end_card": {
+    "text": "Made with AI: images, motion, voice and music generated by AI models.",
+    "subtext": "A fictional demo of the Heritage Short pipeline",
+    "duration_s": 5
+  }
+}
