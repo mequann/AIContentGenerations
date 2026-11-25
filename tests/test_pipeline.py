@@ -154,3 +154,14 @@ def test_mock_film_end_to_end(tmp_path):
     stats = json.loads((final / "export_report.json").read_text())
     assert abs(stats["16x9"]["duration_s"] - film_duration(load(FIX))) < 0.5
     assert abs(stats["16x9"]["integrated_lufs"] - (-14)) < 1.5
+
+
+def test_pending_consent_detected(tmp_path, raw):
+    from pipeline.storyboard import pending_consent
+
+    raw["characters"][0].update(real_person=True, consent_ref="C-05")
+    ethics = tmp_path / "ETHICS.md"
+    ethics.write_text("| C-05 | Friend | PENDING: awaiting voice note |\n", encoding="utf-8")
+    assert pending_consent(_apply_defaults(raw), ethics) == ["C-05"]
+    ethics.write_text("| C-05 | Friend | voice note 2026-11-25 |\n", encoding="utf-8")
+    assert pending_consent(_apply_defaults(raw), ethics) == []

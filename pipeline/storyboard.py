@@ -100,6 +100,21 @@ def semantic_errors(sb: dict, ethics_path: Path | None = None) -> list[str]:
     return errs
 
 
+def pending_consent(sb: dict, ethics_path: Path | None = None) -> list[str]:
+    """Consent refs whose ETHICS.md row is still marked PENDING (blocks likeness generation)."""
+    ethics = ethics_path or (ROOT / "ETHICS.md")
+    text = ethics.read_text(encoding="utf-8") if ethics.exists() else ""
+    refs = {c.get("consent_ref") for c in sb["characters"] if c["real_person"]}
+    if sb["voice"].get("voice_is_real_person"):
+        refs.add(sb["voice"].get("consent_ref"))
+    pending = []
+    for ref in filter(None, refs):
+        for line in text.splitlines():
+            if re.search(rf"\|\s*{re.escape(ref)}\s*\|", line) and "PENDING" in line:
+                pending.append(ref)
+    return sorted(set(pending))
+
+
 def load(path: Path | str, *, strict: bool = True, ethics_path: Path | None = None) -> dict:
     path = Path(path)
     if not path.exists():

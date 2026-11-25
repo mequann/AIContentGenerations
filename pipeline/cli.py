@@ -13,7 +13,7 @@ from .cache import StageCache
 from .config import ROOT
 from .context import Ctx, say
 from .runlog import RunLog, run_id
-from .storyboard import StoryboardError, film_duration, load
+from .storyboard import StoryboardError, film_duration, load, pending_consent
 
 
 def _ctx(a: argparse.Namespace, strict: bool = True) -> Ctx:
@@ -38,6 +38,8 @@ def cmd_validate(a):
         f"narration in {sb['meta']['language']['name']}")
     for w in pacing_warnings(sb):
         say(f"  ⚠ {w}")
+    for ref in pending_consent(sb):
+        say(f"  ⚠ consent {ref} is PENDING in ETHICS.md: images of that person are blocked until it is recorded")
 
 
 def cmd_script(a):

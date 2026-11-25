@@ -4,13 +4,19 @@
 
 **Gate:** `python -m pipeline validate` refuses to run if a storyboard character with
 `real_person: true`, or a voice with `voice_is_real_person: true`, has a `consent_ref` that does
-not appear in the table below. Nothing of a real person is generated before consent is recorded.
+not appear in the table below. While a row is marked **PENDING**, the image stages
+(`references`, `keyframes`) refuse to generate that person; narration and the radio cut,
+which show no one, may run. Nothing of a real person is generated before consent is recorded.
 
 | Ref | Person | Relation | What they agreed to (likeness / voice / story / words) | How recorded (date, medium, where stored) | Reviewed final words? |
 |---|---|---|---|---|---|
-| _C-01_ | | | | | |
+| C-01 | Mequannt (the narrator, shown as a 14-year-old boy) | self | Likeness as an illustrated child, the story, the narration words | Self-consent, 2026-11-25, this repository | Yes (author) |
+| C-02 | Friend 1: _name_ and Friend 2: _name_ (the two friends in the story) | childhood friends | Being depicted as illustrated, non-photoreal children; the story as told in `story/story.md` | PENDING: author reports both agreed (2026-11-25). Need a recorded confirmation from each (voice note or written message) saying they agree to this film and how they are shown; store it privately and note the date and medium here, then remove the word PENDING | After the near-final cut |
 
 Notes:
+- The horse's owner is a real, unnamed person. He is shown only as a tiny, faceless distant
+  figure (shot s09), is never named, and no likeness is generated.
+- The friends are drawn as generic illustrated boys (not from photos), so no real face is copied.
 - The narration voice is a stock Gemini TTS voice unless stated above; no one's voice is cloned.
 - Words placed in a real person's mouth are read back to them before release.
 

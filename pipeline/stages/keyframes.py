@@ -16,7 +16,14 @@ from ..config import LIST_PRICE_USD, MODELS
 from ..context import Ctx, say
 from ..providers import mock
 from ..retry import QuotaExhausted
-from ..storyboard import shot_prompt
+from ..storyboard import pending_consent, shot_prompt
+
+
+def _consent_gate(ctx: Ctx) -> None:
+    pend = pending_consent(ctx.sb)
+    if pend and not ctx.mock:
+        raise RuntimeError(f"consent still PENDING for {', '.join(pend)} in ETHICS.md: record it before "
+                           "generating images of real people (mock runs are allowed)")
 
 
 def _model(ctx: Ctx) -> str:
@@ -54,6 +61,7 @@ def reference_prompt(ctx: Ctx, char: dict) -> str:
 
 
 def run_references(ctx: Ctx) -> dict[str, Path]:
+    _consent_gate(ctx)
     cache = StageCache(ctx.out, "references")
     w, h = ctx.sb["style"]["image_width"], ctx.sb["style"]["image_height"]
     chosen: dict[str, Path] = {}
@@ -98,6 +106,7 @@ def keyframe_inputs(ctx: Ctx, shot: dict, seed: int, refs: list[Path]) -> dict:
 
 
 def run_keyframes(ctx: Ctx) -> dict[str, Path]:
+    _consent_gate(ctx)
     refs_cache = StageCache(ctx.out, "references")
     cache = StageCache(ctx.out, "keyframes")
     out: dict[str, Path] = {}
