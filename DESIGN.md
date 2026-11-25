@@ -34,13 +34,22 @@ Every shot's `reason` lives in `storyboard.json`; this table is the readable cop
 | s10 | medium | Climax and choice: jump, and choose where to land |
 | s11 | medium | Release the tension into laughter; the soft season saved him |
 | s12 | wide | The shared escape, the image the friends will keep |
-| s13 | extreme wide | Bring it to the present so viewers recognise their own friendships |
+| s13 | medium (real photo) | A real photo of the three friends today: the true story behind the generated film |
 
 Structure: setup (s01–s04) → rising action (s05–s09) → climax (s10) → release (s11–s13).
 Music follows the same arc (cue list in `storyboard.json → music.cues`).
 
 **Note:** the s13 line ("Even today, when we meet, we remember that horse and laugh") is my addition,
 not part of the original telling. Test #1 should check whether it rings true or should be cut.
+
+## 2b. Author review of radio cut v1 → changes (2026-11-25)
+
+| Feedback (Mequannt, native speaker, storyteller) | Change |
+|---|---|
+| ሰጠኋቸው, ሽምጥጥ, አልገታውም, መርጬ, ወደቅሁ mispronounced | s04, s10 reworded; s06/s07 kept in his own words (ሽምጥ ሄደ, እንደ ልጓም አልገታው አለ), FAILURES F05 |
+| "No image; doesn't feel like a real film" | look changed from storybook illustration to photorealistic cinematic; more real motion (Wan 2.2) |
+| Include a real photo | s13 is now a real photo of the three friends today |
+| አኮፋዳ is a handwoven cloth school bag (rural Amhara); የተቀየደ = tied | prompts in s02, s04, s11, s12 describe the woven cloth akofada; story notes updated |
 
 ## 3. User test #1: radio cut
 

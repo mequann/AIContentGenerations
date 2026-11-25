@@ -10,8 +10,8 @@ which show no one, may run. Nothing of a real person is generated before consent
 
 | Ref | Person | Relation | What they agreed to (likeness / voice / story / words) | How recorded (date, medium, where stored) | Reviewed final words? |
 |---|---|---|---|---|---|
-| C-01 | Mequannt (the narrator, shown as a 14-year-old boy) | self | Likeness as an illustrated child, the story, the narration words | Self-consent, 2026-11-25, this repository | Yes (author) |
-| C-02 | Aemro Yimer and Mikias Enyew (the two friends in the story) | childhood friends | Being part of the story and depicted as illustrated, non-photoreal boys; the story as told in `story/story.md` | Written statement from each, 2026-11-25, relayed by the author in the project chat; verbatim text in §1.1 below. Originals kept privately by the author | After the near-final cut |
+| C-01 | Mequannt (the narrator, shown as a 14-year-old boy; real photo today in s13) | self | Photorealistic generated depiction as a child (not from his photos), a real photo of today, the story, the narration words | Self-consent, 2026-11-25, this repository | Yes (author) |
+| C-02 | Aemro Yimer and Mikias Enyew (the two friends in the story) | childhood friends | Full consent to being part of the story (verbatim §1.1). Shown as photorealistic *generated* boys (not from their photos) and in one real photo of today (s13) | Written statement from each, 2026-11-25, relayed by the author in the project chat; verbatim text in §1.1 below. Originals kept privately by the author | After the near-final cut |
 
 ### 1.1 Consent statements (verbatim, 2026-11-25)
 
@@ -23,6 +23,10 @@ which show no one, may run. Nothing of a real person is generated before consent
 
 *"I, Mikias Enyew, a friend of Mequannt Acham, am happy to be part of the story and have given my full consent."*
 
+**Scope change, 2026-11-25:** the look moved from illustration to photorealistic and a real photo of today was added.
+Their statements give full consent without limiting the look, but because the change is material, each friend is
+sent the near-final cut and asked to confirm the photoreal look and the photo before posting; the answers go here.
+
 Both friends will be shown the near-final cut before it is posted, so they see exactly how they
 appear and the words used, and can ask for changes.
 
@@ -30,7 +34,8 @@ Notes:
 - The friends' names are kept out of every prompt sent to model APIs and appear only here.
 - The horse's owner is a real, unnamed person. He is shown only as a tiny, faceless distant
   figure (shot s09), is never named, and no likeness is generated.
-- The friends are drawn as generic illustrated boys (not from photos), so no real face is copied.
+- The generated boys are made from text descriptions only; no real photo of anyone is given to an image model,
+  so no real child's face is reproduced. The only real faces are in the s13 photo, which is not committed to git.
 - The narration voice is a stock Gemini TTS voice unless stated above; no one's voice is cloned.
 - Words placed in a real person's mouth are read back to them before release.
 

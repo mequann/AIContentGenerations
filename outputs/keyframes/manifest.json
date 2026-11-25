@@ -1,0 +1,295 @@
+{
+  "s01_c0": {
+    "file": "s01_c0__21c8a92d0545.png",
+    "input_hash": "21c8a92d0545994e7dfd8d579582f4682753d885201befdf9e7188a3d4dfefa5",
+    "updated": "2026-11-25T09:28:20+00:00",
+    "inputs": {
+      "prompt": "A vast green highland meadow with a thin dirt footpath winding across it toward a small school with a tin roof on a distant hill, morning light, low clouds Shot size: extreme wide. Warm hand-painted gouache storybook illustration, soft paper grain, lush green Ethiopian highland meadow after the rains, scattered yellow adey abeba flowers, golden late-afternoon light, earthy browns and fresh greens, gentle nostalgic mood.",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": []
+    }
+  },
+  "s01": {
+    "file": "s01_c0__21c8a92d0545.png",
+    "input_hash": "67249d1991d5b25b3d8f7b433694630fb4588fe6523ab04a3f64ec4b8b8c3072",
+    "updated": "2026-11-25T09:35:20+00:00",
+    "selected_candidate": 0
+  },
+  "s02_c0": {
+    "file": "s02_c0__5e404ade88d8.png",
+    "input_hash": "5e404ade88d8cdf58ace39e3006aa953bd30aea9106eb25d92f08941855502b7",
+    "updated": "2026-11-25T09:29:16+00:00",
+    "inputs": {
+      "prompt": "The boy and his two friends walk home side by side along the footpath through the wide meadow in late-afternoon light, cloth satchels over their shoulders, seen from the front the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals his two friends: two Ethiopian schoolboys aged 13 to 14 in the same faded light-blue school uniform",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "56e0895351186f963520404bee94bb5cf7a6c71cd99da6fac76162bdd0d88a1e"
+      ]
+    }
+  },
+  "s02": {
+    "file": "s02_c0__5e404ade88d8.png",
+    "input_hash": "495a62f09b39c8cd66af1401c6e0170d23c8eaff67c8176937e18868311407a1",
+    "updated": "2026-11-25T09:35:20+00:00",
+    "selected_candidate": 0
+  },
+  "s03_c0": {
+    "file": "s03_c0__463623b51ce5.png",
+    "input_hash": "463623b51ce59d7c5ba6b819b53b363aeeb47690cb5dab63835063534c7ad993",
+    "updated": "2026-11-25T09:29:41+00:00",
+    "inputs": {
+      "prompt": "The horse grazing alone in the meadow, its two front legs tied together with the frayed grey hobble rope, yellow flowers around its hooves the horse: a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its forehead, no saddle, a frayed grey rope Shot size: medium. Warm hand-painted gouache storybook illustration, soft paper grain, lush green Ethiopian highland meadow after the rains, scattered yellow adey abeba flowers, golden late-afternoon lig",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "be879cb04a5fe2eef0b563a45d9b1b8e561731a3458ef87e613b6dd6d4d6a4e1"
+      ]
+    }
+  },
+  "s03": {
+    "file": "s03_c0__463623b51ce5.png",
+    "input_hash": "a0d07f6df1dd640b076862e62262a688cab33ba324ee78a7c537ed8c01ba6df7",
+    "updated": "2026-11-25T09:35:20+00:00",
+    "selected_candidate": 0
+  },
+  "s04_c0": {
+    "file": "s04_c0__36cf16a7dda6.png",
+    "input_hash": "36cf16a7dda68d90dd9cfc9972f6e0d62b2a0012dbd2138e16799dcc15ebb253",
+    "updated": "2026-11-25T09:30:06+00:00",
+    "inputs": {
+      "prompt": "The grinning boy hands his worn khaki canvas akofada satchel to his tall friend, the stocky friend laughs beside them, the horse blurred in the background the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals his two friends: two Ethiopian schoolboys aged 13 to 14 in the same faded light-blue school uniform shirts and dark-blue",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "56e0895351186f963520404bee94bb5cf7a6c71cd99da6fac76162bdd0d88a1e"
+      ]
+    }
+  },
+  "s04": {
+    "file": "s04_c0__36cf16a7dda6.png",
+    "input_hash": "62c86f08eda9aba64cdedbe5e47eb8b3727cfced3f2231ff920315856a6cf9ac",
+    "updated": "2026-11-25T09:35:20+00:00",
+    "selected_candidate": 0
+  },
+  "s05_c0": {
+    "file": "s05_c0__5f33755e84ce.png",
+    "input_hash": "5f33755e84ce52707cdbd84410106bb4409342cb0ede0e46bfb2ed954c702b41",
+    "updated": "2026-11-25T09:30:55+00:00",
+    "inputs": {
+      "prompt": "The two friends hold the horse steady while the boy ties the grey hobble rope around the horse's muzzle as a makeshift bridle, close together in the meadow the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals his two friends: two Ethiopian schoolboys aged 13 to 14 in the same faded light-blue school uniform shirts and dark-blu",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "56e0895351186f963520404bee94bb5cf7a6c71cd99da6fac76162bdd0d88a1e",
+        "be879cb04a5fe2eef0b563a45d9b1b8e561731a3458ef87e613b6dd6d4d6a4e1"
+      ]
+    }
+  },
+  "s05": {
+    "file": "s05_c0__5f33755e84ce.png",
+    "input_hash": "d45fdb4d629f6268e5e4d3f8179f876df3cb176916ee71c0f160f7e88aaaf9c6",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  },
+  "s06_c0": {
+    "file": "s06_c0__28949254ae69.png",
+    "input_hash": "28949254ae69f538e2c24bce148ce98584700136185a978bbd808676727f5eab",
+    "updated": "2026-11-25T09:31:19+00:00",
+    "inputs": {
+      "prompt": "The boy riding bareback on the horse as it bursts into a gallop across the meadow, mud and grass flying from the hooves, his friends small in the background the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals the horse: a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its ",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "be879cb04a5fe2eef0b563a45d9b1b8e561731a3458ef87e613b6dd6d4d6a4e1"
+      ]
+    }
+  },
+  "s06": {
+    "file": "s06_c0__28949254ae69.png",
+    "input_hash": "c11e8a32d5390803f59d1e6e75473f38bb4d639b04194e730f40748567bc0864",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  },
+  "s07_c0": {
+    "file": "s07_c0__b2f045ff3f5d.png",
+    "input_hash": "b2f045ff3f5d327507078a6b7b6ddeafbd2cd3e52a8f28062ee95532f40c91e3",
+    "updated": "2026-11-25T09:32:05+00:00",
+    "inputs": {
+      "prompt": "Close-up of the boy leaning back, pulling hard on the rope with both hands, eyes wide, the horse's head and black mane straining forward the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals the horse: a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its forehead, no saddle,",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "be879cb04a5fe2eef0b563a45d9b1b8e561731a3458ef87e613b6dd6d4d6a4e1"
+      ]
+    }
+  },
+  "s07": {
+    "file": "s07_c0__b2f045ff3f5d.png",
+    "input_hash": "3f712cb048ea83281bcc64d772aacd939bd4305bb58c23f4fb1b8b9e6fdef91f",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  },
+  "s08_c0": {
+    "file": "s08_c0__1d5ddda7226b.png",
+    "input_hash": "1d5ddda7226b9ef3f4efca1af9956230ac5442803f451672b001547b072df71d",
+    "updated": "2026-11-25T09:32:33+00:00",
+    "inputs": {
+      "prompt": "The horse charges with the boy into a tall golden-green teff field, stalks bending, while the two friends stand at the field's edge waving their arms and shouting the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals his two friends: two Ethiopian schoolboys aged 13 to 14 in the same faded light-blue school uniform shirts and d",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "56e0895351186f963520404bee94bb5cf7a6c71cd99da6fac76162bdd0d88a1e",
+        "be879cb04a5fe2eef0b563a45d9b1b8e561731a3458ef87e613b6dd6d4d6a4e1"
+      ]
+    }
+  },
+  "s08": {
+    "file": "s08_c0__1d5ddda7226b.png",
+    "input_hash": "fe07ec4fd9524b36ba727d56ebbca5063a99b96fa03d3868cbfc6a640ceec0f8",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  },
+  "s09_c0": {
+    "file": "s09_c0__5f29545284cf.png",
+    "input_hash": "5f29545284cf9f9ca4886888d2c40300a5b8b8d4520e9b4a74e2f63464b1ad13",
+    "updated": "2026-11-25T09:32:51+00:00",
+    "inputs": {
+      "prompt": "Far across the meadow, a tiny distant figure of a man in a white gabi shawl with a walking stick striding toward the viewer, face not visible, wide empty green field in between Shot size: extreme wide. Warm hand-painted gouache storybook illustration, soft paper grain, lush green Ethiopian highland meadow after the rains, scattered yellow adey abeba flowers, golden late-afternoon light, earthy browns and fresh greens, gentle nostalgic mood.",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": []
+    }
+  },
+  "s09": {
+    "file": "s09_c0__5f29545284cf.png",
+    "input_hash": "2977b724c0054b45aff0fb067ad37ed9d143f351c94ab5f0ff8e1df3d1ee67c8",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  },
+  "s10_c0": {
+    "file": "s10_c0__d1f105639409.png",
+    "input_hash": "d1f10563940933b668a597627bb4a5057a736fee0bc11f5c4e40980997bd2c0d",
+    "updated": "2026-11-25T09:33:46+00:00",
+    "inputs": {
+      "prompt": "The boy leaping sideways off the galloping horse in mid-air above a patch of dark wet mud, arms out, the horse running on the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals the horse: a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its forehead, no saddle, a frayed grey ",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "be879cb04a5fe2eef0b563a45d9b1b8e561731a3458ef87e613b6dd6d4d6a4e1"
+      ]
+    }
+  },
+  "s10": {
+    "file": "s10_c0__d1f105639409.png",
+    "input_hash": "67e325d315bde4ede2f6e3d575f7999f19cea4d359d0a5c8c1df4662c6cd388e",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  },
+  "s11_c0": {
+    "file": "s11_c0__97e77fc84a26.png",
+    "input_hash": "97e77fc84a264182ba3c449840515522265eac76bf80c09f7994f6b9ed1e1400",
+    "updated": "2026-11-25T09:34:12+00:00",
+    "inputs": {
+      "prompt": "The boy sitting in the mud, covered in it and laughing, his two friends running up to him laughing, one holding the khaki akofada satchel the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals his two friends: two Ethiopian schoolboys aged 13 to 14 in the same faded light-blue school uniform shirts and dark-blue shorts; one tall",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "56e0895351186f963520404bee94bb5cf7a6c71cd99da6fac76162bdd0d88a1e"
+      ]
+    }
+  },
+  "s11": {
+    "file": "s11_c0__97e77fc84a26.png",
+    "input_hash": "41a8330f604b2cacde31d4e2a9d634bc9cd87d54c46d09e97bf95a0b568a21ed",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  },
+  "s12_c0": {
+    "file": "s12_c0__a7417d42051c.png",
+    "input_hash": "a7417d42051ce27d53ead76e2427c096f5f47b042ad095ca0c8632fc9f5f8fcd",
+    "updated": "2026-11-25T09:34:56+00:00",
+    "inputs": {
+      "prompt": "The three boys running away together across the meadow toward the setting sun, laughing, satchels bouncing, yellow flowers all around, seen from behind the boy (me, age 14): a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals his two friends: two Ethiopian schoolboys aged 13 to 14 in the same faded light-blue school uniform shirts and dark-blue sh",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "7ab426379c20be084911659fdd9194c5417778694ca3752e3811e21f6ba2bb97",
+        "56e0895351186f963520404bee94bb5cf7a6c71cd99da6fac76162bdd0d88a1e"
+      ]
+    }
+  },
+  "s12": {
+    "file": "s12_c0__a7417d42051c.png",
+    "input_hash": "ee1f29dfaad2f5e0a9f3131390019d4d75c7e5a72e0c0fce43b4c687088e684f",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  },
+  "s13_c0": {
+    "file": "s13_c0__4c279ffb3eae.png",
+    "input_hash": "4c279ffb3eaea77685c5b7d688b2b3d4da080ab4dfc4fe7f92768842b4474961",
+    "updated": "2026-11-25T09:35:19+00:00",
+    "inputs": {
+      "prompt": "The empty meadow at dusk, the horse grazing peacefully far away, hobbled again, warm last light and first stars the horse: a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its forehead, no saddle, a frayed grey rope Shot size: extreme wide. Warm hand-painted gouache storybook illustration, soft paper grain, lush green Ethiopian highland meadow after the rains, scattered yellow adey abeba flowers, golden late-afternoon light, earthy browns and",
+      "negative": "text, letters, watermark, logo, extra fingers, extra legs, deformed horse, deformed hands, photorealistic, modern buildings, cars",
+      "seed": 7,
+      "w": 1344,
+      "h": 768,
+      "model": "@cf/black-forest-labs/flux-2-klein-4b",
+      "refs": [
+        "be879cb04a5fe2eef0b563a45d9b1b8e561731a3458ef87e613b6dd6d4d6a4e1"
+      ]
+    }
+  },
+  "s13": {
+    "file": "s13_c0__4c279ffb3eae.png",
+    "input_hash": "4c0806341f859bcad641988015868e3d3de797b9629e40f539a1f0796d821581",
+    "updated": "2026-11-25T09:35:21+00:00",
+    "selected_candidate": 0
+  }
+}

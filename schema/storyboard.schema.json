@@ -390,6 +390,10 @@
               "type": "integer",
               "minimum": 0,
               "default": 0
+            },
+            "image": {
+              "type": "string",
+              "description": "Optional path (repo-relative) to a real photograph to use instead of generating. If missing, the prompt is generated as a fallback."
             }
           }
         },

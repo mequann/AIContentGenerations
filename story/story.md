@@ -37,7 +37,11 @@ never got to beat us. My friends would love to see it; they remember that season
 
 ## Things that must be right
 
-- Akofada: the cloth/canvas satchel, not a modern backpack.
-- The horse is *hobbled* (ቀይድ on the front legs); that rope becomes the "bridle".
+- Akofada (አኮፋዳ): the handwoven cloth school bag carried over the shoulder in rural Amhara, not a modern backpack.
+- የተቀየደ = tied: the horse's front legs are tied (hobbled) with a rope; that rope becomes the "bridle".
 - Season: tsedey (Meskerem–Hidar): green fields, yellow adey abeba, wet ground, teff standing.
 - The owner is shown only as a distant, unidentifiable figure.
+
+## Look (decided 2026-11-25)
+
+Photorealistic, cinematic, not illustration; plus one real photo of the three friends today as the last shot (s13).

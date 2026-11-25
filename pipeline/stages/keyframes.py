@@ -12,7 +12,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from ..cache import StageCache, file_hash, hash_inputs
-from ..config import LIST_PRICE_USD, MODELS
+from ..config import LIST_PRICE_USD, MODELS, ROOT
 from ..context import Ctx, say
 from ..providers import mock
 from ..retry import QuotaExhausted
@@ -127,6 +127,24 @@ def run_keyframes(ctx: Ctx) -> dict[str, Path]:
             out[sid] = cache.current(sid)
             continue
         kf = shot["keyframe"]
+        photo = (ROOT / kf["image"]) if kf.get("image") else None
+        if photo and photo.exists():
+            # A real photograph supplied by the author: no model call, conformed to the frame.
+            from ..providers import cloudflare as cf
+
+            key = file_hash(photo)
+            path = cache.path_for(f"{sid}_photo", key, ".png")
+            if not path.exists():
+                w, h = ctx.sb["style"]["image_width"], ctx.sb["style"]["image_height"]
+                path.write_bytes(cf.fit_to(photo.read_bytes(), w, h))
+            ctx.log.write(stage="keyframes", shot=sid, event="photo", source=kf["image"], input_hash=key, output=str(path))
+            cache.record(sid, file_hash(path), path, source_photo=kf["image"])
+            out[sid] = path
+            say(f"  ✓ {sid} → real photo {kf['image']}")
+            continue
+        if photo:
+            ctx.warn(f"{sid}: photo {kf['image']} not found (private, not in repo?) → generating from prompt instead")
+            ctx.log.write(stage="keyframes", shot=sid, event="fallback", detail=f"missing photo {kf['image']}")
         paths: list[Path] = []
         for i in range(kf["candidates"]):
             seed = kf["seed"] + i

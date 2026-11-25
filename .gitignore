@@ -19,3 +19,7 @@ outputs/**/*.part
 kaggle/out/
 .DS_Store
 Thumbs.db
+
+# Real photos of real people stay private (pipeline falls back to the prompt if absent)
+assets/photos/*
+!assets/photos/README.md

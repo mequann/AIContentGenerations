@@ -1,0 +1,12 @@
+{
+  "16x9": {
+    "duration_s": 87.0,
+    "integrated_lufs": -14.5,
+    "true_peak_dbfs": -1.0
+  },
+  "9x16": {
+    "duration_s": 87.0,
+    "integrated_lufs": -14.5,
+    "true_peak_dbfs": -1.0
+  }
+}
