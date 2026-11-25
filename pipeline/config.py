@@ -30,6 +30,8 @@ class Models:
     gemini_lite: str = field(default_factory=lambda: env("GEMINI_LITE_MODEL", "gemini-3.8-flash-lite"))
     gemini_tts: str = field(default_factory=lambda: env("GEMINI_TTS_MODEL", "gemini-3.8-flash-preview-tts"))
     cf_image: str = field(default_factory=lambda: env("CF_IMAGE_MODEL", "@cf/black-forest-labs/flux-1-schnell"))
+    image_provider: str = field(default_factory=lambda: env("IMAGE_PROVIDER", "cloudflare").lower())
+    gemini_image: str = field(default_factory=lambda: env("GEMINI_IMAGE_MODEL", "gemini-2.5-flash-image"))
     tts_provider: str = field(default_factory=lambda: env("TTS_PROVIDER", "gemini").lower())
     edge_voice: str = field(default_factory=lambda: env("EDGE_TTS_VOICE", "am-ET-AmehaNeural"))
     edge_rate: str = field(default_factory=lambda: env("EDGE_TTS_RATE", "-8%"))

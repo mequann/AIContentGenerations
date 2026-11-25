@@ -152,3 +152,37 @@ def _tts(text: str, *, model: str, voice: str, style: str) -> AudioResult:
 
 def ping(model: str) -> TextResult:
     return generate_json('Return {"ok": true} as JSON.', model=model, temperature=0)
+
+
+@with_retries(max_attempts=3)
+def image(prompt: str, *, model: str, seed: int, aspect_ratio: str = "16:9",
+          references: list | None = None) -> bytes:
+    """Gemini image model ("Nano Banana" family). Reference images are passed as extra
+    content parts, which is what keeps a character the same person across shots."""
+    from google.genai import types
+    from PIL import Image
+
+    contents: list = []
+    for ref in references or []:
+        contents.append(Image.open(ref))
+    if references:
+        prompt = ("Use the attached reference image(s) for the exact appearance of the characters "
+                  "(face, hair, clothing, proportions) and keep the same illustration style. " + prompt)
+    contents.append(prompt)
+    cfg = types.GenerateContentConfig(response_modalities=["IMAGE"], seed=seed,
+                                      image_config=types.ImageConfig(aspect_ratio=aspect_ratio))
+    try:
+        resp = _client().models.generate_content(model=model, contents=contents, config=cfg)
+    except Exception as e:  # noqa: BLE001
+        raise _translate_error(e) from e
+    for cand in resp.candidates or []:
+        for part in (cand.content.parts if cand.content else []) or []:
+            data = getattr(getattr(part, "inline_data", None), "data", None)
+            if data:
+                if isinstance(data, str):
+                    import base64
+
+                    data = base64.b64decode(data)
+                return data
+    reason = getattr((resp.candidates or [None])[0], "finish_reason", "?")
+    raise RetryableError(f"Gemini image returned no image (finish_reason={reason})")

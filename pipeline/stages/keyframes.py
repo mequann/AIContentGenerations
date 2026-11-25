@@ -27,16 +27,25 @@ def _consent_gate(ctx: Ctx) -> None:
 
 
 def _model(ctx: Ctx) -> str:
-    return "mock" if ctx.mock else MODELS.cf_image
+    if ctx.mock:
+        return "mock"
+    return MODELS.gemini_image if MODELS.image_provider == "gemini" else MODELS.cf_image
 
 
 def _generate(ctx: Ctx, *, stage: str, item: str, prompt: str, seed: int, w: int, h: int,
               refs: list[Path], key: str, path: Path) -> None:
-    with ctx.log.call(stage=stage, shot=item, provider="mock" if ctx.mock else "cloudflare", model=_model(ctx),
+    with ctx.log.call(stage=stage, shot=item, provider="mock" if ctx.mock else MODELS.image_provider, model=_model(ctx),
                       params={"width": w, "height": h, "steps": 4, "n_refs": len(refs), "prompt": prompt[:400]},
                       seed=seed, input_hash=key) as rec:
         if ctx.mock:
             data = mock.image(item, prompt, w, h, seed)
+        elif MODELS.image_provider == "gemini":
+            from ..providers import cloudflare as cf
+            from ..providers import gemini
+
+            raw = gemini.image(prompt, model=MODELS.gemini_image, seed=seed, references=refs,
+                               aspect_ratio="16:9" if w > h else "1:1")
+            data = cf.fit_to(raw, w, h)
         else:
             from ..providers import cloudflare as cf
 

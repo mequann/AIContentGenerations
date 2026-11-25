@@ -4,7 +4,10 @@
     "title": "The Hobbled Horse",
     "title_native": "የተቀየደው ፈረስ",
     "logline": "An eighth-grader walking home across a wide field rides a hobbled horse with only its hobble rope for a bridle, gets carried into a stranger's teff, and saves himself with one well-aimed jump into the mud.",
-    "language": { "code": "am", "name": "Amharic" },
+    "language": {
+      "code": "am",
+      "name": "Amharic"
+    },
     "subtitle_language": "en",
     "audience": "The friends who were there, my family, and Ethiopians who grew up walking to school across fields and now watch on their phones in cities or abroad.",
     "intent": "Viewers laugh at the mischief, feel the green, muddy tsedey season again, and think 'that was us'; the friends recognise the day.",
@@ -63,79 +66,402 @@
     "selected": 0,
     "volume_db": -6,
     "cues": [
-      { "at_s": 0, "note": "solo krar, sparse, morning walk" },
-      { "at_s": 19, "note": "kebero enters as the horse is found and caught" },
-      { "at_s": 32, "note": "full gallop rhythm: ride, teff field, the owner" },
-      { "at_s": 63, "note": "break on the jump, then a laughing, light return" },
-      { "at_s": 82, "note": "warm resolve and fade under the end card" }
+      {
+        "at_s": 0,
+        "note": "solo krar, sparse, morning walk"
+      },
+      {
+        "at_s": 19,
+        "note": "kebero enters as the horse is found and caught"
+      },
+      {
+        "at_s": 32,
+        "note": "full gallop rhythm: ride, teff field, the owner"
+      },
+      {
+        "at_s": 63,
+        "note": "break on the jump, then a laughing, light return"
+      },
+      {
+        "at_s": 82,
+        "note": "warm resolve and fade under the end card"
+      }
     ]
   },
   "shots": [
-    { "id": "s01", "beat": "the long walk", "reason": "Establish the wide field and the long walk that frames the whole memory.", "duration_s": 6, "shot_size": "extreme_wide",
-      "keyframe": { "prompt": "A vast green highland meadow with a thin dirt footpath winding across it toward a small school with a tin roof on a distant hill, morning light, low clouds", "seed": 7 },
-      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.0, "zoom_to": 1.1, "pan": "right" } },
-      "narration": { "text": "ስምንተኛ ክፍል እያለሁ፣ ወደ ትምህርት ቤት ረጅም መንገድ በእግሬ እሄድ ነበር።", "english": "In eighth grade, I walked a long way to school." },
-      "transition": "fade", "vertical": { "mode": "crop", "focus_x": 0.55 } },
-    { "id": "s02", "beat": "walking home", "reason": "Introduce the three boys together, the bond the film is really about.", "duration_s": 7, "shot_size": "wide", "characters": ["boy", "friends"],
-      "keyframe": { "prompt": "The boy and his two friends walk home side by side along the footpath through the wide meadow in late-afternoon light, cloth satchels over their shoulders, seen from the front", "seed": 7 },
-      "motion": { "engine": "wan", "prompt": "the three boys walk slowly toward the camera, grass sways in the wind, camera static", "seed": 11 },
-      "narration": { "text": "መንገዳችን ሰፊ ሜዳ ያቋርጣል። አንድ ቀን፣ ከጓደኞቼ ጋር ስንመለስ…", "english": "Our road crossed a wide field. One day, walking home with my friends…" },
-      "vertical": { "mode": "crop", "focus_x": 0.5 } },
-    { "id": "s03", "beat": "the horse", "reason": "Reveal the temptation: a horse that cannot run away, its front legs hobbled.", "duration_s": 6, "shot_size": "medium", "characters": ["horse"],
-      "keyframe": { "prompt": "The horse grazing alone in the meadow, its two front legs tied together with the frayed grey hobble rope, yellow flowers around its hooves", "seed": 7 },
-      "motion": { "engine": "wan", "prompt": "the horse lowers its head and grazes, tail swishes, camera static", "seed": 11 },
-      "narration": { "text": "ሜዳው ላይ የተቀየደ ፈረስ አገኘን።", "english": "we found a hobbled horse in the field." },
-      "vertical": { "mode": "crop", "focus_x": 0.5 } },
-    { "id": "s04", "beat": "the dare", "reason": "The decision moment, and the akofada handed over: the detail the friends will remember.", "duration_s": 6, "shot_size": "medium_close_up", "characters": ["boy", "friends"],
-      "keyframe": { "prompt": "The grinning boy hands his worn khaki canvas akofada satchel to his tall friend, the stocky friend laughs beside them, the horse blurred in the background", "seed": 7 },
-      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.05, "zoom_to": 1.15, "pan": "none" } },
-      "narration": { "text": "“እንጋልበው!” ተባባልን። አኮፋዳዬን ለጓደኞቼ ሰጠኋቸው።", "english": "“Let's ride it!” we said. I gave my satchel to my friends." },
-      "vertical": { "mode": "crop", "focus_x": 0.45 } },
-    { "id": "s05", "beat": "the rope bridle", "reason": "Show the mistake that drives the story: the hobble rope tied on as a bridle.", "duration_s": 7, "shot_size": "medium", "characters": ["boy", "friends", "horse"],
-      "keyframe": { "prompt": "The two friends hold the horse steady while the boy ties the grey hobble rope around the horse's muzzle as a makeshift bridle, close together in the meadow", "seed": 7 },
-      "motion": { "engine": "wan", "prompt": "the boy pulls the rope tight around the muzzle, the horse shakes its head, camera static", "seed": 11 },
-      "narration": { "text": "ፈረሱን ከበን ያዝነው። በመቀየጃ ገመዱ አፉን ሸብቤ ወጣሁት።", "english": "We surrounded it and caught it. I tied its mouth with the hobble rope and climbed on." },
-      "vertical": { "mode": "crop", "focus_x": 0.5 } },
-    { "id": "s06", "beat": "go!", "reason": "The release: one word and the horse explodes into a gallop.", "duration_s": 6, "shot_size": "wide", "characters": ["boy", "horse"],
-      "keyframe": { "prompt": "The boy riding bareback on the horse as it bursts into a gallop across the meadow, mud and grass flying from the hooves, his friends small in the background", "seed": 7 },
-      "motion": { "engine": "wan", "prompt": "the horse gallops left to right, the boy clings on, camera pans to follow", "seed": 11 },
-      "narration": { "text": "“ሂድ!” ስለው፣ ሽምጥጥ ብሎ ሄደ።", "english": "When I said “Go!”, it shot off at a gallop." },
-      "vertical": { "mode": "crop", "focus_x": 0.45 } },
-    { "id": "s07", "beat": "no brakes", "reason": "Close on the struggle so the audience feels the loss of control.", "duration_s": 6, "shot_size": "close_up", "characters": ["boy", "horse"],
-      "keyframe": { "prompt": "Close-up of the boy leaning back, pulling hard on the rope with both hands, eyes wide, the horse's head and black mane straining forward", "seed": 7 },
-      "motion": { "engine": "wan", "prompt": "the boy pulls the rope back, the horse pushes forward, bouncing motion, camera static", "seed": 11 },
-      "narration": { "text": "ልገታው ሞከርኩ፤ እምቢ አለኝ። ገመዱ እንደ ልጓም አልገታውም።", "english": "I tried to stop it; it refused. The rope was no bridle." },
-      "vertical": { "mode": "crop", "focus_x": 0.5 } },
-    { "id": "s08", "beat": "into the teff", "reason": "Raise the stakes: someone else's crop, and friends panicking.", "duration_s": 7, "shot_size": "wide", "characters": ["boy", "friends", "horse"],
-      "keyframe": { "prompt": "The horse charges with the boy into a tall golden-green teff field, stalks bending, while the two friends stand at the field's edge waving their arms and shouting", "seed": 7 },
-      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.0, "zoom_to": 1.12, "pan": "left" } },
-      "narration": { "text": "የሰው ጤፍ ውስጥ ይዞኝ ገባ። ጓደኞቼ “ጣለው!” እያሉ ተጨነቁ።", "english": "It carried me into someone's teff. My friends panicked, shouting “Let go!”" },
-      "vertical": { "mode": "crop", "focus_x": 0.4 } },
-    { "id": "s09", "beat": "the owner", "reason": "The ticking clock: the owner coming, kept far and faceless.", "duration_s": 5, "shot_size": "extreme_wide",
-      "keyframe": { "prompt": "Far across the meadow, a tiny distant figure of a man in a white gabi shawl with a walking stick striding toward the viewer, face not visible, wide empty green field in between", "seed": 7 },
-      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.0, "zoom_to": 1.2, "pan": "none" } },
-      "narration": { "text": "ባለ ፈረሱ ከሩቅ ሲመጣ አየሁ።", "english": "Then I saw the owner coming from far away." },
-      "vertical": { "mode": "crop", "focus_x": 0.5 } },
-    { "id": "s10", "beat": "the jump", "reason": "The climax and the boy's own choice: jump, and choose where to land.", "duration_s": 7, "shot_size": "medium", "characters": ["boy", "horse"],
-      "keyframe": { "prompt": "The boy leaping sideways off the galloping horse in mid-air above a patch of dark wet mud, arms out, the horse running on", "seed": 7 },
-      "motion": { "engine": "wan", "prompt": "the boy falls slowly toward the mud, the horse runs out of frame, camera static", "seed": 11 },
-      "narration": { "text": "ፈረሱ እየበረረ ሳለ ዘልዬ ወረድኩ። ቦታ መርጬ ጭቃ ላይ ወደቅሁ።", "english": "As it raced on, I jumped. I picked my spot and landed in the mud." },
-      "vertical": { "mode": "crop", "focus_x": 0.5 } },
-    { "id": "s11", "beat": "safe", "reason": "Release the tension into laughter; the season saved him.", "duration_s": 7, "shot_size": "medium", "characters": ["boy", "friends"],
-      "keyframe": { "prompt": "The boy sitting in the mud, covered in it and laughing, his two friends running up to him laughing, one holding the khaki akofada satchel", "seed": 7 },
-      "motion": { "engine": "wan", "prompt": "the friends run in and help the boy up, all laughing, camera static", "seed": 11 },
-      "narration": { "text": "ወቅቱ ጸደይ ነበርና ምንም አልተጎዳሁም። ጓደኞቼም ደስ አላቸው።", "english": "It was tsedey, the ground was soft, and I wasn't hurt. My friends were so relieved." },
-      "vertical": { "mode": "crop", "focus_x": 0.5 } },
-    { "id": "s12", "beat": "the escape", "reason": "The shared escape: three boys running, the image the friends will keep.", "duration_s": 6, "shot_size": "wide", "characters": ["boy", "friends"],
-      "keyframe": { "prompt": "The three boys running away together across the meadow toward the setting sun, laughing, satchels bouncing, yellow flowers all around, seen from behind", "seed": 7 },
-      "motion": { "engine": "wan", "prompt": "the boys run away from the camera into the distance, grass sways, camera static", "seed": 11 },
-      "narration": { "text": "አብረን እየሮጥን አመለጥን። ባለ ፈረሱም ሳይመታን ቀረ።", "english": "We ran off together, and the owner never got to beat us." },
-      "vertical": { "mode": "crop", "focus_x": 0.5 } },
-    { "id": "s13", "beat": "today", "reason": "Bring it to the present so the audience recognises their own friendships.", "duration_s": 6, "shot_size": "extreme_wide", "characters": ["horse"],
-      "keyframe": { "prompt": "The empty meadow at dusk, the horse grazing peacefully far away, hobbled again, warm last light and first stars", "seed": 7 },
-      "motion": { "engine": "kenburns", "kenburns": { "zoom_from": 1.1, "zoom_to": 1.0, "pan": "none" } },
-      "narration": { "text": "ዛሬም ስንገናኝ፣ ያንን ፈረስ እያስታወስን እንስቃለን።", "english": "Even today, when we meet, we remember that horse and laugh." },
-      "transition": "fade", "vertical": { "mode": "crop", "focus_x": 0.55 } }
+    {
+      "id": "s01",
+      "beat": "the long walk",
+      "reason": "Establish the wide field and the long walk that frames the whole memory.",
+      "duration_s": 6,
+      "shot_size": "extreme_wide",
+      "keyframe": {
+        "prompt": "A vast green highland meadow with a thin dirt footpath winding across it toward a small school with a tin roof on a distant hill, morning light, low clouds",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "kenburns",
+        "kenburns": {
+          "zoom_from": 1.0,
+          "zoom_to": 1.1,
+          "pan": "right"
+        }
+      },
+      "narration": {
+        "text": "ስምንተኛ ክፍል እያለሁ፣ ወደ ትምህርት ቤት ረጅም መንገድ በእግሬ እሄድ ነበር።",
+        "english": "In eighth grade, I walked a long way to school."
+      },
+      "transition": "fade",
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.55
+      }
+    },
+    {
+      "id": "s02",
+      "beat": "walking home",
+      "reason": "Introduce the three boys together, the bond the film is really about.",
+      "duration_s": 7,
+      "shot_size": "wide",
+      "characters": [
+        "boy",
+        "friends"
+      ],
+      "keyframe": {
+        "prompt": "The boy and his two friends walk home side by side along the footpath through the wide meadow in late-afternoon light, cloth satchels over their shoulders, seen from the front",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "wan",
+        "prompt": "the three boys walk slowly toward the camera, grass sways in the wind, camera static",
+        "seed": 11
+      },
+      "narration": {
+        "text": "መንገዳችን ሰፊ ሜዳ ያቋርጣል። አንድ ቀን፣ ከጓደኞቼ ጋር ስንመለስ…",
+        "english": "Our road crossed a wide field. One day, walking home with my friends…"
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.5
+      }
+    },
+    {
+      "id": "s03",
+      "beat": "the horse",
+      "reason": "Reveal the temptation: a horse that cannot run away, its front legs hobbled.",
+      "duration_s": 6,
+      "shot_size": "medium",
+      "characters": [
+        "horse"
+      ],
+      "keyframe": {
+        "prompt": "The horse grazing alone in the meadow, its two front legs tied together with the frayed grey hobble rope, yellow flowers around its hooves",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "wan",
+        "prompt": "the horse lowers its head and grazes, tail swishes, camera static",
+        "seed": 11
+      },
+      "narration": {
+        "text": "ሜዳው ላይ የተቀየደ ፈረስ አገኘን።",
+        "english": "we found a hobbled horse in the field."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.5
+      }
+    },
+    {
+      "id": "s04",
+      "beat": "the dare",
+      "reason": "The decision moment, and the akofada handed over: the detail the friends will remember.",
+      "duration_s": 6,
+      "shot_size": "medium_close_up",
+      "characters": [
+        "boy",
+        "friends"
+      ],
+      "keyframe": {
+        "prompt": "The grinning boy hands his worn khaki canvas akofada satchel to his tall friend, the stocky friend laughs beside them, the horse blurred in the background",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "kenburns",
+        "kenburns": {
+          "zoom_from": 1.05,
+          "zoom_to": 1.15,
+          "pan": "none"
+        }
+      },
+      "narration": {
+        "text": "“እንጋልበው!” ተባባልን። አኮፋዳዬን ጓደኞቼ ያዙልኝ።",
+        "english": "“Let's ride it!” we said. My friends held my satchel for me."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.45
+      }
+    },
+    {
+      "id": "s05",
+      "beat": "the rope bridle",
+      "reason": "Show the mistake that drives the story: the hobble rope tied on as a bridle.",
+      "duration_s": 7,
+      "shot_size": "medium",
+      "characters": [
+        "boy",
+        "friends",
+        "horse"
+      ],
+      "keyframe": {
+        "prompt": "The two friends hold the horse steady while the boy ties the grey hobble rope around the horse's muzzle as a makeshift bridle, close together in the meadow",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "wan",
+        "prompt": "the boy pulls the rope tight around the muzzle, the horse shakes its head, camera static",
+        "seed": 11
+      },
+      "narration": {
+        "text": "ፈረሱን ከበን ያዝነው። በመቀየጃ ገመዱ አፉን ሸብቤ ወጣሁት።",
+        "english": "We surrounded it and caught it. I tied its mouth with the hobble rope and climbed on."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.5
+      }
+    },
+    {
+      "id": "s06",
+      "beat": "go!",
+      "reason": "The release: one word and the horse explodes into a gallop.",
+      "duration_s": 6,
+      "shot_size": "wide",
+      "characters": [
+        "boy",
+        "horse"
+      ],
+      "keyframe": {
+        "prompt": "The boy riding bareback on the horse as it bursts into a gallop across the meadow, mud and grass flying from the hooves, his friends small in the background",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "wan",
+        "prompt": "the horse gallops left to right, the boy clings on, camera pans to follow",
+        "seed": 11
+      },
+      "narration": {
+        "text": "“ሂድ!” ስለው፣ እንደ ንፋስ ሮጠ።",
+        "english": "When I said “Go!”, it ran like the wind."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.45
+      }
+    },
+    {
+      "id": "s07",
+      "beat": "no brakes",
+      "reason": "Close on the struggle so the audience feels the loss of control.",
+      "duration_s": 6,
+      "shot_size": "close_up",
+      "characters": [
+        "boy",
+        "horse"
+      ],
+      "keyframe": {
+        "prompt": "Close-up of the boy leaning back, pulling hard on the rope with both hands, eyes wide, the horse's head and black mane straining forward",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "wan",
+        "prompt": "the boy pulls the rope back, the horse pushes forward, bouncing motion, camera static",
+        "seed": 11
+      },
+      "narration": {
+        "text": "ላስቆመው ሞከርኩ፤ እምቢ አለኝ። ገመዱ እንደ ልጓም አልሆነም።",
+        "english": "I tried to stop it; it refused. The rope was no bridle."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.5
+      }
+    },
+    {
+      "id": "s08",
+      "beat": "into the teff",
+      "reason": "Raise the stakes: someone else's crop, and friends panicking.",
+      "duration_s": 7,
+      "shot_size": "wide",
+      "characters": [
+        "boy",
+        "friends",
+        "horse"
+      ],
+      "keyframe": {
+        "prompt": "The horse charges with the boy into a tall golden-green teff field, stalks bending, while the two friends stand at the field's edge waving their arms and shouting",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "kenburns",
+        "kenburns": {
+          "zoom_from": 1.0,
+          "zoom_to": 1.12,
+          "pan": "left"
+        }
+      },
+      "narration": {
+        "text": "የሰው ጤፍ ውስጥ ይዞኝ ገባ። ጓደኞቼ “ጣለው!” እያሉ ተጨነቁ።",
+        "english": "It carried me into someone's teff. My friends panicked, shouting “Let go!”"
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.4
+      }
+    },
+    {
+      "id": "s09",
+      "beat": "the owner",
+      "reason": "The ticking clock: the owner coming, kept far and faceless.",
+      "duration_s": 5,
+      "shot_size": "extreme_wide",
+      "keyframe": {
+        "prompt": "Far across the meadow, a tiny distant figure of a man in a white gabi shawl with a walking stick striding toward the viewer, face not visible, wide empty green field in between",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "kenburns",
+        "kenburns": {
+          "zoom_from": 1.0,
+          "zoom_to": 1.2,
+          "pan": "none"
+        }
+      },
+      "narration": {
+        "text": "ባለ ፈረሱ ከሩቅ ሲመጣ አየሁ።",
+        "english": "Then I saw the owner coming from far away."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.5
+      }
+    },
+    {
+      "id": "s10",
+      "beat": "the jump",
+      "reason": "The climax and the boy's own choice: jump, and choose where to land.",
+      "duration_s": 7,
+      "shot_size": "medium",
+      "characters": [
+        "boy",
+        "horse"
+      ],
+      "keyframe": {
+        "prompt": "The boy leaping sideways off the galloping horse in mid-air above a patch of dark wet mud, arms out, the horse running on",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "wan",
+        "prompt": "the boy falls slowly toward the mud, the horse runs out of frame, camera static",
+        "seed": 11
+      },
+      "narration": {
+        "text": "ፈረሱ እየሮጠ ሳለ ዘልዬ ወረድኩ። ሆን ብዬ ጭቃው ላይ ወደቅኩ።",
+        "english": "As it raced on, I jumped off and landed in the mud on purpose."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.5
+      }
+    },
+    {
+      "id": "s11",
+      "beat": "safe",
+      "reason": "Release the tension into laughter; the season saved him.",
+      "duration_s": 7,
+      "shot_size": "medium",
+      "characters": [
+        "boy",
+        "friends"
+      ],
+      "keyframe": {
+        "prompt": "The boy sitting in the mud, covered in it and laughing, his two friends running up to him laughing, one holding the khaki akofada satchel",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "wan",
+        "prompt": "the friends run in and help the boy up, all laughing, camera static",
+        "seed": 11
+      },
+      "narration": {
+        "text": "ወቅቱ ጸደይ ነበርና ምንም አልተጎዳሁም። ጓደኞቼም ደስ አላቸው።",
+        "english": "It was tsedey, the ground was soft, and I wasn't hurt. My friends were so relieved."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.5
+      }
+    },
+    {
+      "id": "s12",
+      "beat": "the escape",
+      "reason": "The shared escape: three boys running, the image the friends will keep.",
+      "duration_s": 6,
+      "shot_size": "wide",
+      "characters": [
+        "boy",
+        "friends"
+      ],
+      "keyframe": {
+        "prompt": "The three boys running away together across the meadow toward the setting sun, laughing, satchels bouncing, yellow flowers all around, seen from behind",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "wan",
+        "prompt": "the boys run away from the camera into the distance, grass sways, camera static",
+        "seed": 11
+      },
+      "narration": {
+        "text": "አብረን እየሮጥን አመለጥን። ባለ ፈረሱም ሳይመታን ቀረ።",
+        "english": "We ran off together, and the owner never got to beat us."
+      },
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.5
+      }
+    },
+    {
+      "id": "s13",
+      "beat": "today",
+      "reason": "Bring it to the present so the audience recognises their own friendships.",
+      "duration_s": 6,
+      "shot_size": "extreme_wide",
+      "characters": [
+        "horse"
+      ],
+      "keyframe": {
+        "prompt": "The empty meadow at dusk, the horse grazing peacefully far away, hobbled again, warm last light and first stars",
+        "seed": 7
+      },
+      "motion": {
+        "engine": "kenburns",
+        "kenburns": {
+          "zoom_from": 1.1,
+          "zoom_to": 1.0,
+          "pan": "none"
+        }
+      },
+      "narration": {
+        "text": "ዛሬም ስንገናኝ፣ ያንን ፈረስ እያስታወስን እንስቃለን።",
+        "english": "Even today, when we meet, we remember that horse and laugh."
+      },
+      "transition": "fade",
+      "vertical": {
+        "mode": "crop",
+        "focus_x": 0.55
+      }
+    }
   ],
   "end_card": {
     "text": "Made with AI: images, motion, voice and music were generated by AI models from a true story.",

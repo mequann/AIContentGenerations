@@ -17,7 +17,7 @@ def provider(ctx: Ctx) -> str:
 def line_inputs(ctx: Ctx, shot: dict) -> dict:
     v = ctx.sb["voice"]
     prov = provider(ctx)
-    base = {"text": shot["narration"]["text"].strip(), "language": ctx.sb["meta"]["language"]["code"],
+    base = {"text": (shot["narration"].get("tts_text") or shot["narration"]["text"]).strip(), "language": ctx.sb["meta"]["language"]["code"],
             "provider": prov}
     if prov == "edge":  # no style prompt; voice + rate are the controls
         return {**base, "voice": MODELS.edge_voice, "rate": MODELS.edge_rate, "model": "edge-tts"}

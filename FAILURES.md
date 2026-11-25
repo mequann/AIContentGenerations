@@ -63,3 +63,12 @@ Template:
   narration cache key, so switching engines regenerates every line and nothing stale is reused.
 - **Trade-off:** edge voices take no natural-language style direction ("warm, amused, unhurried"); only rate and
   pitch. Compare both by ear if a Gemini TTS model becomes available (EXPERIMENTS.md).
+
+## F05: Amharic TTS mispronounces palatalised / labialised forms (radio cut v1, 2026-11-25)
+- **Voice:** edge-tts am-ET-AmehaNeural. Native-speaker check (the author) flagged: ሰጠኋቸው, ሽምጥጥ, አልገታውም,
+  (ቦታ) መርጬ, ወደቅሁ. The common thread: labialised ኋ, palatalised ጬ, doubled ጥጥ, older ሁ endings.
+- **Fix (v2):** rewrote those four lines in plainer spoken Amharic with the same meaning (s04, s06, s07, s10),
+  e.g. ሽምጥጥ ብሎ ሄደ → እንደ ንፋስ ሮጠ, ወደቅሁ → ወደቅኩ. Added an optional `narration.tts_text` field so a line can be
+  respelled for the voice while subtitles keep the correct spelling. Only the 4 changed lines regenerate.
+- **Cost of the fix:** ሽምጥ ("gallop") was the storyteller's own word; losing it is a real trade-off. Revisit if a
+  better Amharic voice becomes available.
