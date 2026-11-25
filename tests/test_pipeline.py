@@ -165,3 +165,20 @@ def test_pending_consent_detected(tmp_path, raw):
     assert pending_consent(_apply_defaults(raw), ethics) == ["C-05"]
     ethics.write_text("| C-05 | Friend | voice note 2026-11-25 |\n", encoding="utf-8")
     assert pending_consent(_apply_defaults(raw), ethics) == []
+
+
+def test_model_fallback_moves_on_only_when_overloaded(monkeypatch):
+    from pipeline.providers import gemini
+    from pipeline.retry import RetryableError
+
+    monkeypatch.setenv("GEMINI_TEXT_FALLBACKS", "b,c")
+    calls = []
+
+    def fn(x, model):
+        calls.append(model)
+        if model == "a":
+            raise RetryableError("503")
+        return x
+
+    assert gemini.with_model_fallback(fn, "a", "GEMINI_TEXT_FALLBACKS", 1) == (1, "b")
+    assert calls == ["a", "b"]

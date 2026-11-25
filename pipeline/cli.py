@@ -158,6 +158,24 @@ def cmd_smoke(a):
     sys.exit(0 if ok else 1)
 
 
+def cmd_models(a):
+    """List the Gemini models this key can use — the fix when a model id has moved."""
+    from .config import MODELS
+    from .providers import gemini
+
+    rows = gemini.list_models()
+    tts = [r for r in rows if "tts" in r["name"]]
+    flash = [r for r in rows if "flash" in r["name"] and "tts" not in r["name"] and "generateContent" in r["actions"]]
+    say(f"configured: text={MODELS.gemini_text}  tts={MODELS.gemini_tts}\n")
+    say("TTS models (set GEMINI_TTS_MODEL in .env):")
+    for r in tts:
+        say(f"  {r['name']}")
+    say("\nFlash text models (GEMINI_TEXT_MODEL / GEMINI_TEXT_FALLBACKS):")
+    for r in flash:
+        say(f"  {r['name']}")
+    say(f"\n{len(rows)} models visible to this key in total.")
+
+
 def cmd_report(a):
     log = RunLog(Path(a.runs))
     p = report_mod.write(log, Path(a.out) / "report.md")
@@ -207,6 +225,7 @@ def main(argv: list[str] | None = None) -> None:
     sub.add_parser("film", help="run every stage end to end").set_defaults(fn=cmd_film)
     sub.add_parser("status", help="what is cached for each shot").set_defaults(fn=cmd_status)
     sub.add_parser("retime", help="suggest shot durations from measured narration").set_defaults(fn=cmd_retime)
+    sub.add_parser("models", help="list Gemini models available to your key").set_defaults(fn=cmd_models)
     sub.add_parser("report", help="aggregate runs.jsonl into a cost/latency table").set_defaults(fn=cmd_report)
     sub.add_parser("clean", help="remove scratch files").set_defaults(fn=cmd_clean)
 

@@ -42,3 +42,12 @@ Template:
   descriptive prompts ("round-bellied black clay coffee pot with a long narrow neck and spout"), not the Amharic name.
 - **Next:** try FLUX.2 klein 4B (`CF_IMAGE_MODEL=@cf/black-forest-labs/flux-2-klein-4b`), which takes seed, size
   and reference images; record the result in EXPERIMENTS.md.
+
+## F03: Gemini text 503 "high demand" and TTS 400 "Unknown name speechConfig" (smoke test #3, 2026-11-25)
+- **Text:** the key authenticates, but the configured Flash model returned 503 UNAVAILABLE on all 5 attempts
+  (backoff 2→4→8→15 s; 185 s total). Retries behaved as designed; one overloaded model was a single point of failure.
+  **Fix:** per-model retries cut to 3, then fall back through `GEMINI_TEXT_FALLBACKS` / `GEMINI_TTS_FALLBACKS`;
+  the model actually used is logged (`model_used`).
+- **TTS:** `400 INVALID_ARGUMENT: Unknown name "speechConfig"`: the request reached a model or endpoint that does
+  not accept a speech config, i.e. the default TTS model id is wrong for this key.
+  **Fix:** added `python -m pipeline models` to list what this key can actually call; set `GEMINI_TTS_MODEL` from it.

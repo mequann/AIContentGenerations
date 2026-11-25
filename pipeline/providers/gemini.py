@@ -16,12 +16,14 @@ class TextResult:
     text: str
     in_tokens: int = 0
     out_tokens: int = 0
+    model: str = ""
 
 
 @dataclass
 class AudioResult:
     pcm: bytes
     rate: int = TTS_SAMPLE_RATE
+    model: str = ""
 
 
 _CLIENT = None
@@ -55,8 +57,42 @@ def _translate_error(exc: Exception) -> Exception:
     return exc
 
 
-@with_retries(max_attempts=5)
+def _fallbacks(var: str) -> list[str]:
+    return [m.strip() for m in env(var).split(",") if m.strip()]
+
+
+def with_model_fallback(fn, model: str, fallback_var: str, *args, **kwargs):
+    """Try `model`, then each model in $fallback_var, moving on only when a model stays
+    overloaded (503 / rate limit) after its own retries. Returns (result, model_used)."""
+    chain = [model] + [m for m in _fallbacks(fallback_var) if m != model]
+    last: Exception | None = None
+    for m in chain:
+        try:
+            return fn(*args, model=m, **kwargs), m
+        except RetryableError as e:
+            last = e
+            if m != chain[-1]:
+                print(f"    ↪ {m} still unavailable; falling back to {chain[chain.index(m) + 1]}")
+    raise last  # type: ignore[misc]
+
+
+def list_models() -> list[dict]:
+    out = []
+    for m in _client().models.list():
+        out.append({"name": m.name.removeprefix("models/"),
+                    "actions": list(getattr(m, "supported_actions", None) or [])})
+    return out
+
+
 def generate_json(prompt: str, model: str, schema: dict | None = None, temperature: float = 0.7) -> TextResult:
+    res, used = with_model_fallback(_generate_json, model, "GEMINI_TEXT_FALLBACKS", prompt,
+                                    schema=schema, temperature=temperature)
+    res.model = used
+    return res
+
+
+@with_retries(max_attempts=3)
+def _generate_json(prompt: str, model: str, schema: dict | None = None, temperature: float = 0.7) -> TextResult:
     from google.genai import types
 
     cfg = types.GenerateContentConfig(temperature=temperature, response_mime_type="application/json")
@@ -79,8 +115,14 @@ def parse_json(text: str) -> dict:
     return json.loads(text)
 
 
-@with_retries(max_attempts=5)
 def tts(text: str, *, model: str, voice: str, style: str) -> AudioResult:
+    res, used = with_model_fallback(_tts, model, "GEMINI_TTS_FALLBACKS", text, voice=voice, style=style)
+    res.model = used
+    return res
+
+
+@with_retries(max_attempts=3)
+def _tts(text: str, *, model: str, voice: str, style: str) -> AudioResult:
     """Single-speaker TTS. Style is given as a natural-language direction before the line."""
     from google.genai import types
 

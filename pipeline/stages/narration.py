@@ -53,6 +53,7 @@ def run(ctx: Ctx) -> dict[str, float]:
 
                 res = gemini.tts(inputs["text"], model=MODELS.gemini_tts, voice=inputs["voice"], style=inputs["style"])
                 pcm, rate = res.pcm, res.rate
+                rec["model_used"] = res.model
             write_pcm_wav(path, pcm, rate=rate)
             dur = wav_duration(path)
             rec.update(output=str(path), audio_s=round(dur, 3),
