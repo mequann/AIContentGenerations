@@ -1,10 +1,10 @@
 {
   "boy_c0": {
-    "file": "boy_c0__0dccb3ef19d6.png",
-    "input_hash": "0dccb3ef19d65a56adcd88b8ee37c7ca65011ddc29e64933f99c5d2b4cf31783",
-    "updated": "2026-11-25T12:05:31+00:00",
+    "file": "boy_c0__6ba437a68706.png",
+    "input_hash": "6ba437a687066da4e3a596bb101e0af49aaa9be2bdae60d77aa4a58a5e08a981",
+    "updated": "2026-11-25T12:31:37+00:00",
     "inputs": {
-      "prompt": "Reference portrait, full body, standing, facing the camera, neutral expression, even soft light, plain warm-grey background, no text. The boy is a slim 14-year-old Ethiopian Habesha boy with dark brown skin, short tightly curled black hair, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals. Photorealistic cinematic film still, shot on a 35mm lens with shallow depth of field, natural golden late-afternoon light, rural Amhara highlands of Ethiopia in the green tsedey season after the rains, wet earth, scattered yellow adey abeba flowers, eucalyptus trees and round thatched tukul huts in the distance, rich true-to-life colour, gentle film grain, documentary realism.",
+      "prompt": "Photorealistic reference photo, full body, standing, facing the camera, neutral expression, even soft studio light, plain light-grey seamless background, nothing else in frame, no text. The boy is a slim 14-year-old Ethiopian Habesha boy with dark brown skin, short tightly curled black hair, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals.",
       "seed": 1401,
       "w": 1344,
       "h": 768,
@@ -36,17 +36,17 @@
     }
   },
   "boy": {
-    "file": "boy_c0__0dccb3ef19d6.png",
-    "input_hash": "fce61e6e858c64aa9e9e2c7b33e0ff628aaf7ead164219db09f70e9223cc3993",
-    "updated": "2026-11-25T12:14:50+00:00",
+    "file": "boy_c0__6ba437a68706.png",
+    "input_hash": "0c171f8c919730649a7167bff0aec1c114ff8e20155732b390266ac469569a6f",
+    "updated": "2026-11-25T12:36:50+00:00",
     "selected_candidate": 0
   },
   "friends_c0": {
-    "file": "friends_c0__f6992de7f67f.png",
-    "input_hash": "f6992de7f67f2b28018fb2020e6d3e5fd3883f1ef2d9bf348612774060ba8f70",
-    "updated": "2026-11-25T12:05:51+00:00",
+    "file": "friends_c0__5206358e5bf5.png",
+    "input_hash": "5206358e5bf59ffaa86317c34213da6f1bffbe7187d580b6aef1716868ce2ab0",
+    "updated": "2026-11-25T12:31:47+00:00",
     "inputs": {
-      "prompt": "Reference portrait, full body, standing, facing the camera, neutral expression, even soft light, plain warm-grey background, no text. His two friends are Ethiopian Habesha schoolboys aged 13 to 14 with dark brown skin, in the same faded light-blue school uniform shirts and dark-blue shorts; one is tall and thin with a shaved head, the other shorter and stocky wearing a red knitted cap. Photorealistic cinematic film still, shot on a 35mm lens with shallow depth of field, natural golden late-afternoon light, rural Amhara highlands of Ethiopia in the green tsedey season after the rains, wet earth, scattered yellow adey abeba flowers, eucalyptus trees and round thatched tukul huts in the distance, rich true-to-life colour, gentle film grain, documentary realism.",
+      "prompt": "Photorealistic reference photo, full body, standing, facing the camera, neutral expression, even soft studio light, plain light-grey seamless background, nothing else in frame, no text. His two friends are 13-year-old Ethiopian Habesha schoolboys, clearly children not adults, with dark brown skin, in the same faded light-blue school uniform shirts and dark-blue shorts; one is taller and thin with a closely shaved head, the other shorter and stocky wearing a red knitted cap.",
       "seed": 1501,
       "w": 1344,
       "h": 768,
@@ -78,17 +78,17 @@
     }
   },
   "friends": {
-    "file": "friends_c0__f6992de7f67f.png",
-    "input_hash": "de13bfd5b649ef87af9b6cd1e9c69b42aedc6114470354a9f437774d00cc3a0b",
-    "updated": "2026-11-25T12:14:50+00:00",
+    "file": "friends_c0__5206358e5bf5.png",
+    "input_hash": "fed69ad423e54fd085cc2b548b6aa3c7e49c8873727b5f62744ff81230a4b6e7",
+    "updated": "2026-11-25T12:36:50+00:00",
     "selected_candidate": 0
   },
   "horse_c0": {
-    "file": "horse_c0__68b63498b317.png",
-    "input_hash": "68b63498b3179830e896ca89ab4b58d27b8a05ef774bbd028444c5b72424a315",
-    "updated": "2026-11-25T12:06:08+00:00",
+    "file": "horse_c0__096ac352fe2e.png",
+    "input_hash": "096ac352fe2e26fdddc47a26d9edd3006c98ad4781c9dab02766459b533386ac",
+    "updated": "2026-11-25T12:31:56+00:00",
     "inputs": {
-      "prompt": "Reference portrait, full body, standing, facing the camera, neutral expression, even soft light, plain warm-grey background, no text. The horse is a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its forehead and no saddle. Photorealistic cinematic film still, shot on a 35mm lens with shallow depth of field, natural golden late-afternoon light, rural Amhara highlands of Ethiopia in the green tsedey season after the rains, wet earth, scattered yellow adey abeba flowers, eucalyptus trees and round thatched tukul huts in the distance, rich true-to-life colour, gentle film grain, documentary realism.",
+      "prompt": "Photorealistic reference photo, full body, standing, facing the camera, neutral expression, even soft studio light, plain light-grey seamless background, nothing else in frame, no text. The horse is a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its forehead and no saddle.",
       "seed": 1601,
       "w": 1344,
       "h": 768,
@@ -120,9 +120,9 @@
     }
   },
   "horse": {
-    "file": "horse_c0__68b63498b317.png",
-    "input_hash": "38d1660414a254f06239bab37a4db04acb600c4ff34d21c84de3f9fa7dee2d32",
-    "updated": "2026-11-25T12:14:50+00:00",
+    "file": "horse_c0__096ac352fe2e.png",
+    "input_hash": "728cd65831535a03e7f5b4a66b3a19a5087872872b291bdf28fc55a905c3121e",
+    "updated": "2026-11-25T12:36:50+00:00",
     "selected_candidate": 0
   }
 }
