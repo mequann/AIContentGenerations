@@ -252,8 +252,8 @@
         "seed": 11
       },
       "narration": {
-        "text": "“ሂድ!” ስለው፣ እንደ ንፋስ ሮጠ።",
-        "english": "When I said “Go!”, it ran like the wind."
+        "text": "“ሂድ!” ስለው፣ ሽምጥ ሄደ።",
+        "english": "When I said “Go!”, it took off at a gallop."
       },
       "vertical": {
         "mode": "crop",
@@ -280,8 +280,8 @@
         "seed": 11
       },
       "narration": {
-        "text": "ላስቆመው ሞከርኩ፤ እምቢ አለኝ። ገመዱ እንደ ልጓም አልሆነም።",
-        "english": "I tried to stop it; it refused. The rope was no bridle."
+        "text": "ላስቆመው ሞከርኩ፤ እምቢ አለኝ። ገመዱ እንደ ልጓም አልገታው አለ።",
+        "english": "I tried to stop it; it refused. The rope couldn't rein it in like a bridle."
       },
       "vertical": {
         "mode": "crop",

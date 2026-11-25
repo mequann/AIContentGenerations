@@ -70,8 +70,10 @@ Template:
 - **Fix (v2):** rewrote those four lines in plainer spoken Amharic with the same meaning (s04, s06, s07, s10),
   e.g. ሽምጥጥ ብሎ ሄደ → እንደ ንፋስ ሮጠ, ወደቅሁ → ወደቅኩ. Added an optional `narration.tts_text` field so a line can be
   respelled for the voice while subtitles keep the correct spelling. Only the 4 changed lines regenerate.
-- **Cost of the fix:** ሽምጥ ("gallop") was the storyteller's own word; losing it is a real trade-off. Revisit if a
-  better Amharic voice becomes available.
+- **Cost of the fix:** ሽምጥ ("gallop") was the storyteller's own word. **Author review of v2:** rejected the
+  paraphrases for s06 and s07 as not what was said. v3 restores his wording: "ሽምጥ ሄደ" (single ጥ, which the voice
+  may handle better than ሽምጥጥ) and "ገመዱ እንደ ልጓም አልገታው አለ". Authenticity of the telling outranks TTS
+  convenience; if the voice still stumbles, fix with `tts_text`, not by changing the words.
 
 ## F06: Gemini image models are listed for the key but have zero free quota (2026-11-25)
 - **Stage:** references (first image call), `IMAGE_PROVIDER=gemini`, model gemini-2.5-flash-image.
