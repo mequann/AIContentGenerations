@@ -12,6 +12,7 @@ from . import smoke as smoke_mod
 from .cache import StageCache
 from .config import ROOT
 from .context import Ctx, say
+from .retry import QuotaExhausted
 from .runlog import RunLog, run_id
 from .storyboard import StoryboardError, film_duration, load, pending_consent
 
@@ -240,6 +241,12 @@ def main(argv: list[str] | None = None) -> None:
     except StoryboardError as e:
         print(f"✗ {e}", file=sys.stderr)
         sys.exit(2)
+    except QuotaExhausted as e:
+        msg = str(e)
+        hint = ("this model has NO free-tier quota for your key (limit: 0) — switch provider/model in .env"
+                if "limit: 0" in msg else "daily quota used up — re-run later; finished items are cached")
+        print(f"✗ quota: {hint}\n  {msg[:300]}", file=sys.stderr)
+        sys.exit(3)
     except KeyboardInterrupt:
         print("\ninterrupted — completed items are cached; re-run to resume", file=sys.stderr)
         sys.exit(130)

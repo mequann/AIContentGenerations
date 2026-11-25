@@ -2,183 +2,79 @@
   "s01": {
     "file": "s01__b4b72d4ff63e.wav",
     "input_hash": "b4b72d4ff63e8b1d12af8b6cb9c30f78f66bb80cb5f76f59ce1b2f24af4dfbc5",
-    "updated": "2026-11-25T08:51:24+00:00",
-    "inputs": {
-      "text": "ስምንተኛ ክፍል እያለሁ፣ ወደ ትምህርት ቤት ረጅም መንገድ በእግሬ እሄድ ነበር።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 4.897
   },
   "s02": {
     "file": "s02__5fc4281d10ed.wav",
     "input_hash": "5fc4281d10ede985741b6e1070e493a96ddf4505fb37e7fdf3275324898e69ba",
-    "updated": "2026-11-25T08:51:33+00:00",
-    "inputs": {
-      "text": "መንገዳችን ሰፊ ሜዳ ያቋርጣል። አንድ ቀን፣ ከጓደኞቼ ጋር ስንመለስ…",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 5.044
   },
   "s03": {
     "file": "s03__cd9b36dc1600.wav",
     "input_hash": "cd9b36dc1600450680f7b144236c16af38168cad2fe58a164641c6f0ef6d40b3",
-    "updated": "2026-11-25T08:51:40+00:00",
-    "inputs": {
-      "text": "ሜዳው ላይ የተቀየደ ፈረስ አገኘን።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 2.915
   },
   "s04": {
-    "file": "s04__3c39715f1fde.wav",
-    "input_hash": "3c39715f1fde34c5cac31e83187eace0130932a4beedee88958bb50f938861fc",
-    "updated": "2026-11-25T08:51:52+00:00",
-    "inputs": {
-      "text": "“እንጋልበው!” ተባባልን። አኮፋዳዬን ለጓደኞቼ ሰጠኋቸው።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
-    "duration_s": 4.351
+    "file": "s04__26a886cba56f.wav",
+    "input_hash": "26a886cba56fcf24b4b89b82bba19b8e8bd8fea89ce3d6810018903f4cd2af66",
+    "updated": "2026-11-25T09:11:28+00:00",
+    "duration_s": 4.009
   },
   "s05": {
     "file": "s05__add81a1df683.wav",
     "input_hash": "add81a1df68323e3185eeeabd017f12e4248c5db119370c124af32ca44deaf2f",
-    "updated": "2026-11-25T08:52:04+00:00",
-    "inputs": {
-      "text": "ፈረሱን ከበን ያዝነው። በመቀየጃ ገመዱ አፉን ሸብቤ ወጣሁት።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 4.582
   },
   "s06": {
-    "file": "s06__a40a9064003d.wav",
-    "input_hash": "a40a9064003d064f10b258bc5f12c328a5530f2e01bda9f4a4852d497a88fc7a",
-    "updated": "2026-11-25T08:52:14+00:00",
-    "inputs": {
-      "text": "“ሂድ!” ስለው፣ ሽምጥጥ ብሎ ሄደ።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
-    "duration_s": 2.666
+    "file": "s06__15c5a94a3dd9.wav",
+    "input_hash": "15c5a94a3dd9adde0137ee0bdd1a9a7ff99378ddc3e73f2075b9fbcfbef13eed",
+    "updated": "2026-11-25T09:11:28+00:00",
+    "duration_s": 2.56
   },
   "s07": {
-    "file": "s07__11ac73cb7bfb.wav",
-    "input_hash": "11ac73cb7bfbacf3dd0aed6b4f9d7d172c499ed5d3dde1fbaf1603a9c513cf27",
-    "updated": "2026-11-25T08:52:24+00:00",
-    "inputs": {
-      "text": "ልገታው ሞከርኩ፤ እምቢ አለኝ። ገመዱ እንደ ልጓም አልገታውም።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
-    "duration_s": 4.205
+    "file": "s07__eb0d38ef9163.wav",
+    "input_hash": "eb0d38ef9163e3587be63fe048539363b3ba68dc398e40106e8ac2c870812241",
+    "updated": "2026-11-25T09:11:28+00:00",
+    "duration_s": 4.229
   },
   "s08": {
     "file": "s08__41f32c281d96.wav",
     "input_hash": "41f32c281d96ffe463c96f4f8e59c3c133db8b590553db9dfa8b280d0cfff3d6",
-    "updated": "2026-11-25T08:52:34+00:00",
-    "inputs": {
-      "text": "የሰው ጤፍ ውስጥ ይዞኝ ገባ። ጓደኞቼ “ጣለው!” እያሉ ተጨነቁ።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 4.863
   },
   "s09": {
     "file": "s09__04cc92b9b68a.wav",
     "input_hash": "04cc92b9b68ad56b79e1a7f738b3883f73ccc42e1ca612777d168f87ee3c90f5",
-    "updated": "2026-11-25T08:52:42+00:00",
-    "inputs": {
-      "text": "ባለ ፈረሱ ከሩቅ ሲመጣ አየሁ።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 2.828
   },
   "s10": {
-    "file": "s10__bb60a037eed6.wav",
-    "input_hash": "bb60a037eed69ea9d6438abc32261725b1520ae3ab80f58a530cac0462a52d94",
-    "updated": "2026-11-25T08:52:48+00:00",
-    "inputs": {
-      "text": "ፈረሱ እየበረረ ሳለ ዘልዬ ወረድኩ። ቦታ መርጬ ጭቃ ላይ ወደቅሁ።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
-    "duration_s": 4.731
+    "file": "s10__4f385798d8ba.wav",
+    "input_hash": "4f385798d8baecda71a63a409fe5b0ff150633dcbe9f68dc63206655f3421958",
+    "updated": "2026-11-25T09:11:28+00:00",
+    "duration_s": 4.635
   },
   "s11": {
     "file": "s11__b555d02b13f2.wav",
     "input_hash": "b555d02b13f2b5658b6258da6e2a34e3dc0d5474ae9a0aa465faa7007c72a9a8",
-    "updated": "2026-11-25T08:52:54+00:00",
-    "inputs": {
-      "text": "ወቅቱ ጸደይ ነበርና ምንም አልተጎዳሁም። ጓደኞቼም ደስ አላቸው።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 4.788
   },
   "s12": {
     "file": "s12__fd71e731788f.wav",
     "input_hash": "fd71e731788f2e4ce923cbeb6d2284141294540cc8d6eb95985bf98b4643d8c9",
-    "updated": "2026-11-25T08:53:02+00:00",
-    "inputs": {
-      "text": "አብረን እየሮጥን አመለጥን። ባለ ፈረሱም ሳይመታን ቀረ።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 4.096
   },
   "s13": {
     "file": "s13__33fb66fdd3c7.wav",
     "input_hash": "33fb66fdd3c7abcfc71c216faff6a82903e3d67db84e1586b034ce087c4a615e",
-    "updated": "2026-11-25T08:53:13+00:00",
-    "inputs": {
-      "text": "ዛሬም ስንገናኝ፣ ያንን ፈረስ እያስታወስን እንስቃለን።",
-      "language": "am",
-      "provider": "edge",
-      "voice": "am-ET-AmehaNeural",
-      "rate": "-8%",
-      "model": "edge-tts"
-    },
+    "updated": "2026-11-25T09:11:28+00:00",
     "duration_s": 4.039
   }
 }

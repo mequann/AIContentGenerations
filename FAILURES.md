@@ -72,3 +72,12 @@ Template:
   respelled for the voice while subtitles keep the correct spelling. Only the 4 changed lines regenerate.
 - **Cost of the fix:** ሽምጥ ("gallop") was the storyteller's own word; losing it is a real trade-off. Revisit if a
   better Amharic voice becomes available.
+
+## F06: Gemini image models are listed for the key but have zero free quota (2026-11-25)
+- **Stage:** references (first image call), `IMAGE_PROVIDER=gemini`, model gemini-2.5-flash-image.
+- **Symptom:** `429 RESOURCE_EXHAUSTED … limit: 0 … generate_content_free_tier_requests` per minute **and** per day.
+- **Cause:** "listed by `models`" ≠ "usable for free". Image models are behind paid billing (as the brief warned);
+  the free-tier limit is literally 0, so waiting 22 h would not help.
+- **Handling:** the adapter raised `QuotaExhausted` (not retried, correct). The CLI now prints a one-line reason
+  instead of a traceback and distinguishes "limit: 0" (switch provider) from "used up" (wait). Back to Cloudflare FLUX.
+- **Lesson:** probe quota, not just model visibility, in the smoke test before designing around a model.
