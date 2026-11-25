@@ -4,6 +4,10 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows consoles: print ✓ / Ge'ez sa
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-from .cli import main  # noqa: E402
+try:
+    from .cli import main  # noqa: E402
+except ModuleNotFoundError as e:  # friendlier than a traceback on a fresh clone
+    sys.exit(f"Missing Python package '{e.name}'. Install dependencies first:\n"
+             f"    python -m pip install -r requirements.txt")
 
 main()
