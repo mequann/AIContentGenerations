@@ -173,6 +173,11 @@ def cmd_models(a):
     say("\nFlash text models (GEMINI_TEXT_MODEL / GEMINI_TEXT_FALLBACKS):")
     for r in flash:
         say(f"  {r['name']}")
+    shown = {r["name"] for r in tts + flash}
+    say("\nOther models (name: supported actions):")
+    for r in rows:
+        if r["name"] not in shown:
+            say(f"  {r['name']}: {', '.join(r['actions']) or '?'}")
     say(f"\n{len(rows)} models visible to this key in total.")
 
 
