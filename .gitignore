@@ -1,5 +1,7 @@
-# Secrets
+# Secrets (any .env variant; only the template is tracked)
 .env
+.env.*
+!.env.example
 *.key
 kaggle.json
 
