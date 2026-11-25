@@ -30,7 +30,7 @@ Suggested experiments this pipeline is set up for (delete once run):
 - **Hypothesis:** the storyteller will connect more with a photoreal film; illustration reads as "a children's book, not my memory".
 - **Change:** `style.block` gouache storybook → photorealistic 35 mm cinematic; negative excludes cartoon/illustration.
 - **Evidence:** author feedback on radio cut / first draft: "not seems real film" (DESIGN.md §2b).
-- **Result:** _fill in after keyframes v2 (compare `outputs/_tmp/contact.jpg` v1 vs v2)._
+- **Result:** _fill in after keyframes v2 (v1 sheet: `outputs/review/keyframes_v1_illustration.jpg`)._
 
 ## E02: List-style character text makes FLUX draw panels (2026-11-25)
 - **Observation (keyframes v1, FLUX.1 schnell):** 5 of 13 keyframes (s04, s05, s07, s11, s13) came out as two-panel
