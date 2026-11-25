@@ -24,13 +24,21 @@ class AudioResult:
     rate: int = TTS_SAMPLE_RATE
 
 
-def _client():
-    key = env("GEMINI_API_KEY")
-    if not key:
-        raise RuntimeError("GEMINI_API_KEY is not set (copy .env.example to .env)")
-    from google import genai
+_CLIENT = None
 
-    return genai.Client(api_key=key)
+
+def _client():
+    """One long-lived client. A throwaway `genai.Client(...).models.x()` can be garbage-collected
+    mid-call, which closes its HTTP session ("Cannot send a request, as the client has been closed")."""
+    global _CLIENT
+    if _CLIENT is None:
+        key = env("GEMINI_API_KEY")
+        if not key:
+            raise RuntimeError("GEMINI_API_KEY is not set (copy .env.example to .env)")
+        from google import genai
+
+        _CLIENT = genai.Client(api_key=key)
+    return _CLIENT
 
 
 def _translate_error(exc: Exception) -> Exception:
