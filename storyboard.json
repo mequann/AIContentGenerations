@@ -15,7 +15,7 @@
     "fps": 24
   },
   "style": {
-    "block": "Photorealistic cinematic film still, shot on a 35mm lens with shallow depth of field, natural golden late-afternoon light, rural Amhara highlands of Ethiopia in the green tsedey season after the rains, wet earth, scattered yellow adey abeba flowers, rich true-to-life colour, gentle film grain, documentary realism.",
+    "block": "Photorealistic cinematic film still, shot on a 35mm lens with shallow depth of field, natural golden late-afternoon light, rural Amhara highlands of Ethiopia in the green tsedey season after the rains, wet earth, scattered yellow adey abeba flowers, eucalyptus trees and round thatched tukul huts in the distance, rich true-to-life colour, gentle film grain, documentary realism.",
     "negative": "cartoon, illustration, painting, anime, 3d render, text, letters, watermark, logo, extra fingers, extra limbs, deformed horse, extra legs, distorted face, modern buildings, cars, plastic backpack",
     "image_width": 1344,
     "image_height": 768
@@ -24,30 +24,30 @@
     {
       "id": "boy",
       "name": "the boy (me, age 14)",
-      "description": "a slim 14-year-old Ethiopian boy with short curly black hair, brown skin, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals",
+      "description": "the boy is a slim 14-year-old Ethiopian Habesha boy with dark brown skin, short tightly curled black hair, a round face and a mischievous grin, wearing a faded light-blue school uniform shirt, dark-blue shorts and black plastic sandals",
       "real_person": true,
       "consent_ref": "C-01",
       "seed": 1401,
-      "candidates": 3,
+      "candidates": 1,
       "selected": 0
     },
     {
       "id": "friends",
       "name": "his two friends",
-      "description": "two Ethiopian schoolboys aged 13 to 14 in the same faded light-blue school uniform shirts and dark-blue shorts; one tall and thin with a shaved head, one shorter and stocky wearing a red knitted cap",
+      "description": "his two friends are Ethiopian Habesha schoolboys aged 13 to 14 with dark brown skin, in the same faded light-blue school uniform shirts and dark-blue shorts; one is tall and thin with a shaved head, the other shorter and stocky wearing a red knitted cap",
       "real_person": true,
       "consent_ref": "C-02",
       "seed": 1501,
-      "candidates": 3,
+      "candidates": 1,
       "selected": 0
     },
     {
       "id": "horse",
       "name": "the horse",
-      "description": "a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its forehead, no saddle, a frayed grey rope",
+      "description": "the horse is a small sturdy Ethiopian highland horse with a chestnut-brown coat, short black mane, a white blaze on its forehead and no saddle",
       "real_person": false,
       "seed": 1601,
-      "candidates": 3,
+      "candidates": 1,
       "selected": 0
     }
   ],
@@ -96,7 +96,7 @@
       "duration_s": 6,
       "shot_size": "extreme_wide",
       "keyframe": {
-        "prompt": "A vast green highland meadow with a thin dirt footpath winding across it toward a small school with a tin roof on a distant hill, morning light, low clouds",
+        "prompt": "A vast green Ethiopian highland meadow with a thin dirt footpath winding across it toward a small rural school with mud walls and a corrugated tin roof on a distant hill, morning light, low clouds",
         "seed": 7
       },
       "motion": {

@@ -25,3 +25,18 @@ Suggested experiments this pipeline is set up for (delete once run):
 - **Setup:** model, seed, params (run id: `…`)
 - **Result:**
 - **Decision:**
+
+## E01: Illustration vs photorealistic look (2026-11-25)
+- **Hypothesis:** the storyteller will connect more with a photoreal film; illustration reads as "a children's book, not my memory".
+- **Change:** `style.block` gouache storybook → photorealistic 35 mm cinematic; negative excludes cartoon/illustration.
+- **Evidence:** author feedback on radio cut / first draft: "not seems real film" (DESIGN.md §2b).
+- **Result:** _fill in after keyframes v2 (compare `outputs/_tmp/contact.jpg` v1 vs v2)._
+
+## E02: List-style character text makes FLUX draw panels (2026-11-25)
+- **Observation (keyframes v1, FLUX.1 schnell):** 5 of 13 keyframes (s04, s05, s07, s11, s13) came out as two-panel
+  "character sheet" layouts, and the boys looked light-skinned and the setting European (red-roof cottage).
+- **Hypothesis:** prompts formatted as `Name: description` plus a reference-sheet habit trigger panel layouts;
+  "Ethiopian" alone is too weak to set skin tone and place.
+- **Change:** prompt now opens with "One single continuous cinematic frame… no panels"; characters written as plain
+  sentences; descriptions say "Habesha, dark brown skin"; style block adds eucalyptus and tukul huts.
+- **Result:** _fill in: count of panel layouts in v2 (target 0/13); do the boys read as Ethiopian?_

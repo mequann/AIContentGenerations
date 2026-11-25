@@ -64,8 +64,8 @@ def _generate(ctx: Ctx, *, stage: str, item: str, prompt: str, seed: int, w: int
 # ----------------------------------------------------------------------------- references
 
 def reference_prompt(ctx: Ctx, char: dict) -> str:
-    return (f"Character reference sheet of {char['name']}: full body front view and close-up portrait side by side, "
-            f"neutral expression, even soft light, plain warm-grey background. {char['description'].strip()} "
+    return (f"Reference portrait, full body, standing, facing the camera, neutral expression, even soft light, plain "
+            f"warm-grey background, no text. {char['description'].strip()[:1].upper() + char['description'].strip()[1:]}. "
             f"{ctx.sb['style']['block'].strip()}")
 
 

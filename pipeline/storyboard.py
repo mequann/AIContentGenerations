@@ -160,17 +160,20 @@ def timeline(sb: dict) -> list[Slot]:
 
 
 def shot_prompt(sb: dict, shot: dict) -> str:
-    """Full image prompt = shot prompt + fixed character descriptions + style block.
+    """Full image prompt = framing guard + shot prompt + fixed character descriptions + style block.
 
     Drift mostly comes from re-describing things differently each time, so the
-    character and style text is injected verbatim, never paraphrased.
+    character and style text is injected verbatim, never paraphrased. Characters are
+    written as plain sentences (not "Name: description" lists), because list-like
+    prompts made FLUX draw character-sheet panels instead of one scene (EXPERIMENTS E02).
     """
     chars = {c["id"]: c for c in sb["characters"]}
-    parts = [shot["keyframe"]["prompt"].strip()]
+    parts = ["One single continuous cinematic frame of one scene (no panels, no split screen, no text).",
+             shot["keyframe"]["prompt"].strip().rstrip(".") + "."]
     for cid in shot["characters"]:
-        c = chars[cid]
-        parts.append(f"{c['name']}: {c['description'].strip()}")
-    parts.append(f"Shot size: {shot['shot_size'].replace('_', ' ')}.")
+        d = chars[cid]["description"].strip().rstrip(".")
+        parts.append(d[:1].upper() + d[1:] + ".")
+    parts.append(f"{shot['shot_size'].replace('_', ' ').capitalize()} shot.")
     parts.append(sb["style"]["block"].strip())
     return " ".join(parts)
 

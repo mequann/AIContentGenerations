@@ -76,7 +76,7 @@ def test_prompt_injects_character_and_style_verbatim():
     sb = load(FIX)
     s02 = sb["shots"][1]
     p = shot_prompt(sb, s02)
-    assert sb["characters"][0]["description"] in p and sb["style"]["block"] in p
+    assert sb["characters"][0]["description"][1:] in p and sb["style"]["block"] in p
 
 
 # --- caching ------------------------------------------------------------------
