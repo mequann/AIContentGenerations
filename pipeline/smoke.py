@@ -50,6 +50,16 @@ def run(log: RunLog, out: Path) -> bool:
     else:
         rows.append(("gemini", "SKIP", 0.0, "GEMINI_API_KEY not set"))
 
+    if MODELS.tts_provider == "edge":
+        from .providers import edge
+
+        def etts():
+            p = out / "smoke_tts_am_edge.wav"
+            edge.tts_to_wav("ሰላም። እንኳን ደህና መጣችሁ።", p, voice=MODELS.edge_voice, rate=MODELS.edge_rate)
+            return f"{p.name} {probe_duration(p):.1f}s (listen: is the Amharic right?)"
+
+        rows.append(_try(log, "edge-tts", "edge", MODELS.edge_voice, etts))
+
     if env("CLOUDFLARE_ACCOUNT_ID") and env("CLOUDFLARE_API_TOKEN"):
         from .providers import cloudflare as cf
 

@@ -10,21 +10,26 @@ from ..providers import mock
 STAGE = "narration"
 
 
+def provider(ctx: Ctx) -> str:
+    return "mock" if ctx.mock else MODELS.tts_provider
+
+
 def line_inputs(ctx: Ctx, shot: dict) -> dict:
     v = ctx.sb["voice"]
-    return {
-        "text": shot["narration"]["text"].strip(),
-        "voice": v["tts_voice"],
-        "style": shot["narration"].get("style_override") or v["style_instruction"],
-        "language": ctx.sb["meta"]["language"]["code"],
-        "model": "mock" if ctx.mock else MODELS.gemini_tts,
-    }
+    prov = provider(ctx)
+    base = {"text": shot["narration"]["text"].strip(), "language": ctx.sb["meta"]["language"]["code"],
+            "provider": prov}
+    if prov == "edge":  # no style prompt; voice + rate are the controls
+        return {**base, "voice": MODELS.edge_voice, "rate": MODELS.edge_rate, "model": "edge-tts"}
+    return {**base, "voice": v["tts_voice"], "style": shot["narration"].get("style_override") or v["style_instruction"],
+            "model": "mock" if ctx.mock else MODELS.gemini_tts}
 
 
 def run(ctx: Ctx) -> dict[str, float]:
     cache = StageCache(ctx.out, STAGE)
     durations: dict[str, float] = {}
-    say(f"▶ narration ({'mock' if ctx.mock else MODELS.gemini_tts}, voice={ctx.sb['voice']['tts_voice']})")
+    probe = line_inputs(ctx, ctx.sb["shots"][0])
+    say(f"▶ narration ({probe['provider']}: {probe['model']}, voice={probe['voice']})")
     for shot in ctx.sb["shots"]:
         sid = shot["id"]
         if not shot["narration"]["text"].strip():
@@ -43,21 +48,27 @@ def run(ctx: Ctx) -> dict[str, float]:
             durations[sid] = wav_duration(cache.current(sid))
             continue
         path = cache.path_for(sid, key, ".wav")
-        params = {k: inputs[k] for k in ("voice", "style", "language")}
-        with ctx.log.call(stage=STAGE, shot=sid, provider="mock" if ctx.mock else "gemini",
+        params = {k: v for k, v in inputs.items() if k not in ("text", "model", "provider")}
+        with ctx.log.call(stage=STAGE, shot=sid, provider=inputs["provider"],
                           model=inputs["model"], params=params, input_hash=key) as rec:
             if ctx.mock:
                 pcm, rate = mock.speech_pcm(inputs["text"]), 24000
+            elif inputs["provider"] == "edge":
+                from ..providers import edge
+
+                edge.tts_to_wav(inputs["text"], path, voice=inputs["voice"], rate=inputs["rate"])
+                pcm = None
             else:
                 from ..providers import gemini
 
                 res = gemini.tts(inputs["text"], model=MODELS.gemini_tts, voice=inputs["voice"], style=inputs["style"])
                 pcm, rate = res.pcm, res.rate
                 rec["model_used"] = res.model
-            write_pcm_wav(path, pcm, rate=rate)
+            if pcm is not None:
+                write_pcm_wav(path, pcm, rate=rate)
             dur = wav_duration(path)
             rec.update(output=str(path), audio_s=round(dur, 3),
-                       cost_usd=0.0 if ctx.mock else round(dur * LIST_PRICE_USD["gemini_tts_per_second_audio"], 5))
+                       cost_usd=0.0 if ctx.mock or inputs["provider"] != "gemini" else round(dur * LIST_PRICE_USD["gemini_tts_per_second_audio"], 5))
         cache.record(sid, key, path, inputs=inputs, duration_s=round(dur, 3))
         durations[sid] = dur
         say(f"  + {sid} generated ({dur:.1f}s)")

@@ -3,6 +3,7 @@ google-genai>=1.30          # Gemini text + TTS
 requests>=2.31              # Cloudflare Workers AI REST
 jsonschema>=4.21            # storyboard contract validation
 python-dotenv>=1.0          # secrets from .env (never committed)
+edge-tts>=7.0               # Amharic TTS fallback (am-ET voices), no key
 Pillow>=10.3                # end cards, reference sheets, mock keyframes
 imageio-ffmpeg>=0.5         # bundled FFmpeg fallback when none is on PATH
 

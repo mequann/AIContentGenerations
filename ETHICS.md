@@ -48,6 +48,7 @@ Notes:
 | Component | Licence / terms | Commercial use of outputs | Checked |
 |---|---|---|---|
 | Gemini 3.x Flash / TTS (Gemini API free tier) | Google Gemini API terms; free-tier data may be used to improve products | Allowed per terms | |
+| Microsoft Edge neural TTS via `edge-tts` (fallback narration) | Microsoft online read-aloud service; `edge-tts` client is LGPLv3. Not an official API, so terms for published use are unclear | Treat as non-commercial; disclose in end card and post | |
 | FLUX.1 schnell | Apache 2.0 | Yes | |
 | FLUX.2 klein 4B | Apache 2.0 (9B variant: non-commercial) | 4B: yes | |
 | Wan 2.2 TI2V-5B | Apache 2.0 | Yes | |

@@ -51,3 +51,15 @@ Template:
 - **TTS:** `400 INVALID_ARGUMENT: Unknown name "speechConfig"`: the request reached a model or endpoint that does
   not accept a speech config, i.e. the default TTS model id is wrong for this key.
   **Fix:** added `python -m pipeline models` to list what this key can actually call; set `GEMINI_TTS_MODEL` from it.
+
+## F04: No Gemini TTS model available to this API key (2026-11-25)
+- **Evidence:** `python -m pipeline models` lists 28 models for the key (an `AQ.`-prefixed key): Flash 2.5–3.8,
+  Pro, Gemma 4, image, embedding and agent models, but **no TTS model**. The configured
+  `gemini-3.8-flash-preview-tts` therefore fails with `400 Unknown name "speechConfig"`.
+- **Options considered:** (1) a standard AI Studio key (`AIza…`) that may expose TTS; (2) `gemini-omni-flash-preview`
+  with audio output (unverified); (3) a second TTS engine with native Amharic voices.
+- **Done:** narration is now provider-pluggable (`TTS_PROVIDER=gemini|edge`). `edge` uses Microsoft neural voices
+  via `edge-tts` (am-ET-AmehaNeural / am-ET-MekdesNeural), no key needed. Provider, voice and rate are part of the
+  narration cache key, so switching engines regenerates every line and nothing stale is reused.
+- **Trade-off:** edge voices take no natural-language style direction ("warm, amused, unhurried"); only rate and
+  pitch. Compare both by ear if a Gemini TTS model becomes available (EXPERIMENTS.md).
