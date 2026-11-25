@@ -105,3 +105,4 @@ $0 on free tiers. Measured latency, GPU minutes and list-price equivalents are i
 
 Code: MIT. Bundled font: Noto Sans Ethiopic (SIL OFL 1.1, `assets/fonts/OFL.txt`).
 Model and output licences are listed in [ETHICS.md](ETHICS.md).
+# AIContentGenerations
