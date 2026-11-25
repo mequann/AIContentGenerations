@@ -46,7 +46,10 @@ def run(log: RunLog, out: Path) -> bool:
             write_pcm_wav(p, r.pcm, r.rate)
             return f"{p.name} {probe_duration(p):.1f}s (listen: is the Amharic right?)"
 
-        rows.append(_try(log, "gemini-tts", "gemini", MODELS.gemini_tts, tts))
+        if MODELS.tts_provider == "gemini":
+            rows.append(_try(log, "gemini-tts", "gemini", MODELS.gemini_tts, tts))
+        else:
+            rows.append(("gemini-tts", "SKIP", 0.0, f"TTS_PROVIDER={MODELS.tts_provider}"))
     else:
         rows.append(("gemini", "SKIP", 0.0, "GEMINI_API_KEY not set"))
 
