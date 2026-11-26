@@ -38,7 +38,7 @@
   "boy": {
     "file": "boy_c0__6ba437a68706.png",
     "input_hash": "0c171f8c919730649a7167bff0aec1c114ff8e20155732b390266ac469569a6f",
-    "updated": "2026-11-25T12:36:50+00:00",
+    "updated": "2026-11-26T11:18:09+00:00",
     "selected_candidate": 0
   },
   "friends_c0": {
@@ -80,7 +80,7 @@
   "friends": {
     "file": "friends_c0__5206358e5bf5.png",
     "input_hash": "fed69ad423e54fd085cc2b548b6aa3c7e49c8873727b5f62744ff81230a4b6e7",
-    "updated": "2026-11-25T12:36:50+00:00",
+    "updated": "2026-11-26T11:18:09+00:00",
     "selected_candidate": 0
   },
   "horse_c0": {
@@ -122,7 +122,7 @@
   "horse": {
     "file": "horse_c0__096ac352fe2e.png",
     "input_hash": "728cd65831535a03e7f5b4a66b3a19a5087872872b291bdf28fc55a905c3121e",
-    "updated": "2026-11-25T12:36:50+00:00",
+    "updated": "2026-11-26T11:18:09+00:00",
     "selected_candidate": 0
   }
 }

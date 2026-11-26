@@ -26,7 +26,9 @@ from pathlib import Path
 
 
 def load_pipe(model_id: str, device: str):
+    # pyrefly: ignore[missing-import]
     import torch
+    # pyrefly: ignore[missing-import]
     from diffusers import AutoencoderKLWan, WanImageToVideoPipeline
 
     major = torch.cuda.get_device_capability()[0] if torch.cuda.is_available() else 0
@@ -52,7 +54,9 @@ def main() -> None:
     ap.add_argument("--device", default="cuda:0")
     a = ap.parse_args()
 
+    # pyrefly: ignore[missing-import]
     import torch
+    # pyrefly: ignore[missing-import]
     from diffusers.utils import export_to_video, load_image
 
     jobs_path = Path(a.jobs)
@@ -78,7 +82,10 @@ def main() -> None:
         rec = {"shot": j["shot"], "model": j["model"], "seed": j["seed"], "params": params,
                "input_hash": j["input_hash"], "n_gpus": 1}
         try:
-            img = load_image(str(jobs_path.parent / j["image"])).resize((j["width"], j["height"]))
+            img_path = jobs_path.parent / j["image"]
+            if not img_path.exists():
+                img_path = jobs_path.parent / Path(j["image"]).name
+            img = load_image(str(img_path)).resize((j["width"], j["height"]))
             gen = torch.Generator(device="cpu").manual_seed(int(j["seed"]))
             frames = pipe(image=img, prompt=j["prompt"], negative_prompt=j.get("negative") or None,
                           height=j["height"], width=j["width"], num_frames=j["num_frames"],

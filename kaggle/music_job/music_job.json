@@ -1,0 +1,16 @@
+{
+  "caption": "playful Ethiopian highland folk, masinqo and krar, light kebero hand drum, acoustic, warm, mischievous and nostalgic, sparse at first, lively galloping rhythm in the middle, settling into a gentle warm ending",
+  "lyrics": "[instrumental]",
+  "bpm": 96,
+  "key": "D major",
+  "seed": 42,
+  "candidates": 3,
+  "duration": 90,
+  "model": "ACE-Step/ACE-Step-1.5",
+  "job_key": "00f6159a1ec9",
+  "output_names": [
+    "music_c0__00f6159a1ec9.wav",
+    "music_c1__00f6159a1ec9.wav",
+    "music_c2__00f6159a1ec9.wav"
+  ]
+}
